@@ -1,10 +1,17 @@
 # SWP391-BE
 📄 DANH SÁCH API DỰ ÁN
+
+
 🔐 1. Authentication (Xác thực)
+
 Phương thức	Endpoint	Chức năng
+
 POST	/auth/login	Đăng nhập
+
 POST	/auth/register	Đăng ký tài khoản
+
 POST	/auth/forgot	Quên mật khẩu
+
 POST	/auth/logout	Đăng xuất
 
 👤 2. User Profile & Role
