@@ -1,0 +1,391 @@
+info:
+  description: API hỗ trợ điều trị và quản lý bệnh nhân HIV
+  title: HIV Treatment API
+  version: 1.0.0
+openapi: 3.0.0
+paths:
+  /appointments:
+    get:
+      responses:
+        '200':
+          description: Thành công
+      summary: Danh sách lịch hẹn
+    post:
+      responses:
+        '200':
+          description: Thành công
+      summary: Đặt lịch khám/tư vấn
+  /appointments/{id}:
+    get:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Chi tiết lịch hẹn
+  /appointments/{id}/status:
+    put:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Cập nhật trạng thái (xác nhận/hủy)
+  /auth/forgot:
+    post:
+      responses:
+        '200':
+          description: Thành công
+      summary: Quên mật khẩu
+  /auth/login:
+    post:
+      responses:
+        '200':
+          description: Thành công
+      summary: Đăng nhập
+  /auth/logout:
+    post:
+      responses:
+        '200':
+          description: Thành công
+      summary: Đăng xuất
+  /auth/register:
+    post:
+      responses:
+        '200':
+          description: Thành công
+      summary: Đăng ký tài khoản
+  /blogs:
+    get:
+      responses:
+        '200':
+          description: Thành công
+      summary: Danh sách bài viết, tin tức
+  /dashboard/stats:
+    get:
+      responses:
+        '200':
+          description: Thành công
+      summary: Thống kê tổng quan hệ thống
+  /doctors:
+    get:
+      responses:
+        '200':
+          description: Thành công
+      summary: Danh sách bác sĩ
+  /medical-records:
+    get:
+      responses:
+        '200':
+          description: Thành công
+      summary: Lấy danh sách hồ sơ y tế
+    post:
+      responses:
+        '200':
+          description: Thành công
+      summary: Tạo hồ sơ y tế
+  /medical-records/{id}:
+    delete:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Xóa hồ sơ
+    get:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Chi tiết hồ sơ
+    put:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Cập nhật hồ sơ
+  /medications:
+    get:
+      responses:
+        '200':
+          description: Thành công
+      summary: Danh sách thuốc
+    post:
+      responses:
+        '200':
+          description: Thành công
+      summary: Thêm thuốc mới
+  /medications/{id}:
+    delete:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Xóa thuốc
+    get:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Chi tiết thuốc
+    put:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Cập nhật thuốc
+  /patients:
+    get:
+      responses:
+        '200':
+          description: Thành công
+      summary: Lấy danh sách bệnh nhân
+    post:
+      responses:
+        '200':
+          description: Thành công
+      summary: Thêm bệnh nhân
+  /patients/{id}:
+    delete:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Xóa bệnh nhân
+    get:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Chi tiết bệnh nhân
+    put:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Cập nhật bệnh nhân
+  /patients/{id}/appointments:
+    get:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Lịch theo bệnh nhân
+  /patients/{id}/medical-records:
+    get:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Hồ sơ theo bệnh nhân
+  /patients/{id}/treatments:
+    get:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Điều trị theo bệnh nhân
+  /prescriptions:
+    get:
+      responses:
+        '200':
+          description: Thành công
+      summary: Danh sách đơn thuốc
+    post:
+      responses:
+        '200':
+          description: Thành công
+      summary: Tạo đơn thuốc mới
+  /prescriptions/{id}:
+    delete:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Xóa đơn thuốc
+    get:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Chi tiết đơn thuốc
+    put:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Cập nhật đơn thuốc
+  /reports:
+    get:
+      responses:
+        '200':
+          description: Thành công
+      summary: Báo cáo theo khoảng thời gian
+  /resources:
+    get:
+      responses:
+        '200':
+          description: Thành công
+      summary: Danh sách tài liệu giáo dục
+  /treatments:
+    get:
+      responses:
+        '200':
+          description: Thành công
+      summary: Danh sách điều trị
+    post:
+      responses:
+        '200':
+          description: Thành công
+      summary: Tạo điều trị mới
+  /treatments/{id}:
+    delete:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Xóa điều trị
+    get:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Chi tiết điều trị
+    put:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Cập nhật thông tin điều trị
+  /user/list:
+    get:
+      responses:
+        '200':
+          description: Thành công
+      summary: Danh sách tất cả user (admin/manager)
+  /user/profile:
+    get:
+      responses:
+        '200':
+          description: Thành công
+      summary: Lấy thông tin tài khoản hiện tại
+    put:
+      responses:
+        '200':
+          description: Thành công
+      summary: Cập nhật thông tin cá nhân
+  /user/roles:
+    get:
+      responses:
+        '200':
+          description: Thành công
+      summary: Lấy danh sách vai trò người dùng
+  /user/{id}/role:
+    put:
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Thành công
+      summary: Cập nhật vai trò người dùng
