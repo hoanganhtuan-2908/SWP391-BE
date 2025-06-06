@@ -5,145 +5,110 @@ https://docs.google.com/document/d/1T3EYg2VZFC7tm7bPtop-myZqG6gd1xtwCkkbvFYU6Tw/
 📄 DANH SÁCH API DỰ ÁN
 
 
-🔐 1. Authentication (Xác thực)
+✅ 1. Guest (Không cần đăng nhập)
+GET /blogs – Xem danh sách bài viết, tin tức
 
+GET /resources – Xem danh sách tài liệu giáo dục
 
-Phương thức	Endpoint	Chức năng
+POST /auth/register – Đăng ký tài khoản
 
-POST	/auth/login	Đăng nhập
+POST /auth/login – Đăng nhập
 
-POST	/auth/register	Đăng ký tài khoản
+POST /auth/forgot – Quên mật khẩu
 
-POST	/auth/forgot	Quên mật khẩu
+✅ 2. Customer (Bệnh nhân, cần đăng nhập)
+GET /user/profile – Lấy thông tin cá nhân
 
-POST	/auth/logout	Đăng xuất
+PUT /user/profile – Cập nhật thông tin cá nhân
 
+GET /appointments – Xem lịch hẹn
 
-👤 2. User Profile & Role
+POST /appointments – Đặt lịch khám hoặc tư vấn
 
-Phương thức	Endpoint	Chức năng
+GET /appointments/{id} – Chi tiết lịch hẹn
 
-GET	/user/profile	Lấy thông tin tài khoản hiện tại
+PUT /appointments/{id}/status – Hủy hoặc xác nhận lịch hẹn
 
-PUT	/user/profile	Cập nhật thông tin cá nhân
+GET /patients/{id}/appointments – Xem lịch của bệnh nhân
 
-GET	/user/roles	Lấy danh sách vai trò người dùng
+GET /patients/{id}/medical-records – Xem hồ sơ y tế cá nhân
 
-GET	/user/list	Danh sách tất cả user (admin/manager)
+GET /patients/{id}/treatments – Xem thông tin điều trị
 
-PUT	/user/{id}/role	Cập nhật vai trò người dùng
+GET /medical-records/{id} – Chi tiết hồ sơ
 
+GET /treatments – Danh sách điều trị
 
-🧍 3. Patients (Bệnh nhân)
+GET /treatments/{id} – Chi tiết điều trị
 
-Phương thức	Endpoint	Chức năng
+GET /medications – Danh sách thuốc
 
-GET	/patients	Lấy danh sách bệnh nhân
+GET /medications/{id} – Chi tiết thuốc
 
-GET	/patients/{id}	Chi tiết bệnh nhân
+GET /prescriptions – Danh sách đơn thuốc
 
-POST	/patients	Thêm bệnh nhân
+POST /prescriptions – Tạo đơn thuốc (qua bác sĩ)
 
-PUT	/patients/{id}	Cập nhật bệnh nhân
+GET /prescriptions/{id} – Chi tiết đơn thuốc
 
-DELETE	/patients/{id}	Xóa bệnh nhân
+GET /reports – Báo cáo (theo thời gian)
 
+✅ 3. Staff (Nhân viên y tế)
+GET /patients – Danh sách bệnh nhân
 
-📝 4. Medical Records (Hồ sơ y tế)
+GET /patients/{id} – Chi tiết bệnh nhân
 
-Phương thức	Endpoint	Chức năng
+PUT /patients/{id} – Cập nhật bệnh nhân
 
-GET	/medical-records	Lấy danh sách hồ sơ y tế
+GET /appointments – Lịch hẹn
 
-GET	/medical-records/{id}	Chi tiết hồ sơ
+POST /appointments – Đặt lịch
 
-GET	/patients/{id}/medical-records	Hồ sơ theo bệnh nhân
+GET /appointments/{id} – Chi tiết
 
-POST	/medical-records	Tạo hồ sơ y tế
+PUT /appointments/{id}/status – Cập nhật trạng thái
 
-PUT	/medical-records/{id}	Cập nhật hồ sơ
+GET /medical-records – Danh sách hồ sơ
 
-DELETE	/medical-records/{id}	Xóa hồ sơ
+GET /medical-records/{id} – Chi tiết
 
+PUT /medical-records/{id} – Cập nhật
 
-📅 5. Appointments (Lịch hẹn khám)
+DELETE /medical-records/{id} – Xóa hồ sơ
 
-Phương thức	Endpoint	Chức năng
+POST /medical-records – Tạo hồ sơ
 
-POST	/appointments	Đặt lịch khám/tư vấn
+✅ 4. Doctor (Bác sĩ)
+Tất cả quyền như Staff, cộng thêm:
 
-GET	/appointments	Danh sách lịch hẹn
+GET /doctors – Danh sách bác sĩ (để chọn tư vấn)
 
-GET	/appointments/{id}	Chi tiết lịch hẹn
+POST /treatments – Tạo mới điều trị
 
-GET	/patients/{id}/appointments	Lịch theo bệnh nhân
+PUT /treatments/{id} – Cập nhật điều trị
 
-PUT	/appointments/{id}/status	Cập nhật trạng thái (xác nhận/hủy)
+DELETE /treatments/{id} – Xóa điều trị
 
+PUT /prescriptions/{id} – Cập nhật đơn thuốc
 
+DELETE /prescriptions/{id} – Xóa đơn thuốc
 
-💊 6. Treatments & Protocols (Phác đồ điều trị)
+POST /medications – Thêm thuốc
 
-Phương thức	Endpoint	Chức năng
+PUT /medications/{id} – Cập nhật thuốc
 
-GET	/treatments	Danh sách điều trị
+DELETE /medications/{id} – Xóa thuốc
 
-GET	/treatments/{id}	Chi tiết điều trị
+✅ 5. Manager (Quản lý)
+Tất cả quyền của Doctor & Staff, cộng thêm:
 
-GET	/patients/{id}/treatments	Điều trị theo bệnh nhân
+GET /dashboard/stats – Thống kê hệ thống
 
-POST	/treatments	Tạo điều trị mới
+GET /user/list – Danh sách user (admin/manager/staff/doctor/patient)
 
-PUT	/treatments/{id}	Cập nhật thông tin điều trị
+PUT /user/{id}/role – Cập nhật vai trò
 
-DELETE	/treatments/{id}	Xóa điều trị
+GET /user/roles – Lấy danh sách vai trò người dùng
 
-
-📦 7. Medications (Thuốc)
-
-Phương thức	Endpoint	Chức năng
-
-GET	/medications	Danh sách thuốc
-
-GET	/medications/{id}	Chi tiết thuốc
-
-POST	/medications	Thêm thuốc mới
-
-PUT	/medications/{id}	Cập nhật thuốc
-
-DELETE	/medications/{id}	Xóa thuốc
-
-
-📋 8. Prescriptions (Đơn thuốc)
-
-Phương thức	Endpoint	Chức năng
-
-GET	/prescriptions	Danh sách đơn thuốc
-
-GET	/prescriptions/{id}	Chi tiết đơn thuốc
-
-POST	/prescriptions	Tạo đơn thuốc mới
-
-PUT	/prescriptions/{id}	Cập nhật đơn thuốc
-
-DELETE	/prescriptions/{id}	Xóa đơn thuốc
-
-
-📊 9. Dashboard / Báo cáo
-
-Phương thức	Endpoint	Chức năng
-
-GET	/dashboard/stats	Thống kê tổng quan hệ thống
-
-GET	/reports?from&to	Báo cáo theo khoảng thời gian
-
-
-🏥 10. Hệ thống & Tài nguyên
-
-Phương thức	Endpoint	Chức năng
-
-GET	/resources	Danh sách tài liệu giáo dục
-
-GET	/blogs	Danh sách bài viết, tin tức
-
-GET	/doctors	Danh sách bác sĩ
+✅ 6. Admin
+Toàn quyền tạo, sửa, xóa tài khoản mọi vai trò (thường thực hiện qua POST/PUT/DELETE với /user/*, có thể được bổ sung thêm nếu cần)
