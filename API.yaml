@@ -1,0 +1,218 @@
+openapi: 3.0.0
+info:
+  title: HIV Treatment API
+  description: API hỗ trợ điều trị và quản lý bệnh nhân HIV với phân quyền người dùng
+  version: 1.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/tuanhoang-6ae/API/1.0.0
+  description: SwaggerHub API Auto Mocking
+- url: https://api.hiv-treatment.local
+  description: Local Development Server
+paths:
+  /home:
+    get:
+      tags:
+      - Guest
+      summary: Trang chủ
+      responses:
+        "200":
+          description: Thành công
+  /about:
+    get:
+      tags:
+      - Guest
+      summary: Giới thiệu bệnh viện và bác sĩ
+      responses:
+        "200":
+          description: Thành công
+  /blogs:
+    get:
+      tags:
+      - Guest
+      - Customer
+      summary: "Danh sách bài viết, tài liệu"
+      responses:
+        "200":
+          description: Thành công
+  /auth/register:
+    post:
+      tags:
+      - Guest
+      summary: Đăng ký tài khoản
+      responses:
+        "200":
+          description: Thành công
+  /auth/login:
+    post:
+      tags:
+      - Guest
+      - Customer
+      - Staff
+      - Doctor
+      - Manager
+      - Admin
+      summary: Đăng nhập
+      responses:
+        "200":
+          description: Thành công
+  /auth/logout:
+    post:
+      tags:
+      - Customer
+      - Staff
+      - Doctor
+      - Manager
+      - Admin
+      summary: Đăng xuất
+      responses:
+        "200":
+          description: Thành công
+  /appointments:
+    get:
+      tags:
+      - Customer
+      - Staff
+      - Doctor
+      - Manager
+      summary: Danh sách lịch hẹn
+      responses:
+        "200":
+          description: Thành công
+    post:
+      tags:
+      - Customer
+      summary: Đặt lịch khám/tư vấn
+      responses:
+        "200":
+          description: Thành công
+  /patients:
+    get:
+      tags:
+      - Staff
+      - Doctor
+      - Manager
+      summary: Lấy danh sách bệnh nhân
+      responses:
+        "200":
+          description: Thành công
+    post:
+      tags:
+      - Staff
+      summary: Thêm bệnh nhân mới
+      responses:
+        "200":
+          description: Thành công
+  /patients/{id}:
+    get:
+      tags:
+      - Staff
+      - Doctor
+      - Manager
+      summary: Chi tiết bệnh nhân
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Thành công
+    put:
+      tags:
+      - Staff
+      - Doctor
+      summary: Cập nhật bệnh nhân
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Thành công
+    delete:
+      tags:
+      - Manager
+      summary: Xóa bệnh nhân
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Thành công
+  /medical-records:
+    get:
+      tags:
+      - Staff
+      - Doctor
+      - Manager
+      summary: Danh sách hồ sơ y tế
+      responses:
+        "200":
+          description: Thành công
+    post:
+      tags:
+      - Staff
+      - Doctor
+      summary: Tạo hồ sơ y tế
+      responses:
+        "200":
+          description: Thành công
+  /treatments:
+    get:
+      tags:
+      - Doctor
+      - Manager
+      summary: Danh sách điều trị
+      responses:
+        "200":
+          description: Thành công
+    post:
+      tags:
+      - Doctor
+      summary: Tạo điều trị mới
+      responses:
+        "200":
+          description: Thành công
+  /dashboard/stats:
+    get:
+      tags:
+      - Manager
+      summary: Thống kê hệ thống
+      responses:
+        "200":
+          description: Thành công
+  /user:
+    get:
+      tags:
+      - Admin
+      summary: Danh sách tài khoản
+      responses:
+        "200":
+          description: Thành công
+  /user/{id}/role:
+    put:
+      tags:
+      - Admin
+      summary: Cập nhật vai trò người dùng
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Thành công
+components:
+  schemas: {}
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
