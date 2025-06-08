@@ -358,70 +358,85 @@ select * from Roles
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
 VALUES ('UID001', 'R001', N'Lê Quốc Việt', 'lequocviet123', 'lequocviet@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID002', 'R001', N'Nguyễn Quản Trị', 'nguyenquantri123', 'nguyenquantri@gmail.com');
+VALUES ('UID002', 'R001', N'Nguyễn Văn Nguyên', 'nguyenvannguyen123', 'nguyenvannguyen@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID003', 'R001', N'Nguyễn Quản Trị', 'nguyenquantri123', 'nguyenquantri@gmail.com');
+VALUES ('UID003', 'R001', N'Nguyễn Quản Trị 1', 'nguyenquantri123', 'nguyenquantri@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID004', 'R001', N'Nguyễn Quản Trị', 'nguyenquantri123', 'nguyenquantri@gmail.com');
+VALUES ('UID004', 'R001', N'Nguyễn Quản Trị 2', 'nguyenquantri123', 'nguyenquantri2@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID005', 'R001', N'Nguyễn Quản Trị', 'nguyenquantri123', 'nguyenquantri@gmail.com');
+VALUES ('UID005', 'R001', N'Nguyễn Quản Trị 3', 'nguyenquantri123', 'nguyenquantri3@gmail.com');
 
 
--- Tạo tài khoản quan lý
+
+
+-- Tạo tài khoản quản lý
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
 VALUES ('UID006', 'R002', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID007', 'R002', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
+VALUES ('UID007', 'R002', N'Nguyễn Quản LÝ 2', 'nguyenquanly123', 'nguyenquanly2@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID008', 'R002', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
+VALUES ('UID008', 'R002', N'Nguyễn Quản LÝ 3', 'nguyenquanly123', 'nguyenquanly3@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID009', 'R002', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
+VALUES ('UID009', 'R002', N'Nguyễn Quản LÝ 4', 'nguyenquanly123', 'nguyenquanly4@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID010', 'R002', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
+VALUES ('UID010', 'R002', N'Nguyễn Quản LÝ 5', 'nguyenquanly123', 'nguyenquanly5@gmail.com');
 
 --tạo tk bác sĩ
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID011', 'R003', N'Nguyễn Bác sĩ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
+VALUES ('UID011', 'R003', N'Nguyễn Bác sĩ', 'nguyenbacsi123', 'nguyenbacsi@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID012', 'R003', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
+VALUES ('UID012', 'R003', N'Nguyễn Bác sĩ 2', 'nguyenbacsi123', 'nguyenbacsi2@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID013', 'R003', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
+VALUES ('UID013', 'R003', N'Nguyễn Bác sĩ 3', 'nguyenbacsi123', 'nguyenbacsi3@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID014', 'R003', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
+VALUES ('UID014', 'R003', N'Nguyễn Bác sĩ 4', 'nguyenbacsi123', 'nguyenbacsi4@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID015', 'R003', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
+VALUES ('UID015', 'R003', N'Nguyễn Bác sĩ 5', 'nguyenbacsi123', 'nguyenbacsi5@gmail.com');
+
 
 --tạo tk staff
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID015', 'R004', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
+VALUES ('UID016', 'R004', N'Nguyễn Nhân Viên', 'nguyennhanvien123', 'nguyennhanvien@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID017', 'R004', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
+VALUES ('UID017', 'R004', N'Nguyễn Nhân Viên 2', 'nguyennhanvien123', 'nguyennhanvien2@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID018', 'R004', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
+VALUES ('UID018', 'R004', N'Nguyễn Nhân Viên 3', 'nguyennhanvien123', 'nguyennhanvien3@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID019', 'R004', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
+VALUES ('UID019', 'R004', N'Nguyễn Nhân Viên 4', 'nguyennhanvien123', 'nguyennhanvien4@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID020', 'R004', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
+VALUES ('UID020', 'R004', N'Nguyễn Nhân Viên 5', 'nguyennhanvien123', 'nguyennhanvien5@gmail.com');
+
+
 
 --tạo tk patient
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID021', 'R005', N'Nguyễn bệnh nhân', 'nguyenquanly123', 'nguyenquanly@gmail.com');
-INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID022', 'R005', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
-INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID023', 'R005', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
-INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID024', 'R005', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
-INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID025', 'R005', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
-/*
+VALUES ('UID021', 'R005', N'Nguyễn Bệnh Nhân 1', 'nguyenbenhnhan123', 'nguyenbenhnhan@gmail.com');
+INSERT INTO Users (UserID, RoleID, Fullname, Password, Email)
+VALUES ('UID022', 'R005', N'Nguyễn Bệnh Nhân 2', 'nguyenbenhnhan123', 'nguyenbenhnhan2@gmail.com');
+INSERT INTO Users (UserID, RoleID, Fullname, Password, Email)
+VALUES ('UID023', 'R005', N'Nguyễn Bệnh Nhân 3', 'nguyenbenhnhan123', 'nguyenbenhnhan3@gmail.com');
+INSERT INTO Users (UserID, RoleID, Fullname, Password, Email)
+VALUES ('UID024', 'R005', N'Nguyễn Bệnh Nhân 4', 'nguyenbenhnhan123', 'nguyenbenhnhan4@gmail.com');
+INSERT INTO Users (UserID, RoleID, Fullname, Password, Email)
+VALUES ('UID025', 'R005', N'Nguyễn Bệnh Nhân 5', 'nguyenbenhnhan123', 'nguyenbenhnhan5@gmail.com');
+
+
 
 -- Thêm dữ liệu vào bảng Doctors
 INSERT INTO Doctors (DoctorID, UserID, Specialization, LicenseNumber, ExperienceYears) 
-VALUES ('DT001', 'UID011', N'Bác sĩ nội khoa', 'LIC123456', 10);
+VALUES ('DT001', 'UID011', N'Miễn dịch', 'LIC123456', 10);
 
 INSERT INTO Doctors (DoctorID, UserID, Specialization, LicenseNumber, ExperienceYears) 
-VALUES ('DT002', 'UID012', N'Bác sĩ truyền nhiễm', 'LIC789012', 15);
+VALUES ('DT002', 'UID012', N'Bệnh truyền nhiễm', 'LIC789012', 15);
+
+
+/*
+select * from Roles
+select * from Doctors
+select * from Patients
+select * from Users where RoleID = 'R005'
+
+
 
 -- Thêm dữ liệu vào bảng Patients
 INSERT INTO Patients (PatientID, UserID, DateOfBirth, Gender, Phone, BloodType, Allergy) 
