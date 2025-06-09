@@ -5,6 +5,8 @@ GO
 USE MedicalSystem;
 GO
 
+set dateformat dmy
+
 -- USERS & ROLES
 CREATE TABLE Roles (
     RoleID VARCHAR(10) PRIMARY KEY,
@@ -351,234 +353,214 @@ insert into Roles values ('R002', 'Manager');
 insert into Roles values ('R003', 'Doctor');
 insert into Roles values ('R004', 'Staff');
 insert into Roles values ('R005', 'Patient');
-select * from Roles
+--select * from Roles
 
 
 -- Tạo tài khoản quản trị viên
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID001', 'R001', N'Lê Quốc Việt', 'lequocviet123', 'lequocviet@gmail.com');
+VALUES ('UID000001', 'R001', N'Lê Quốc Việt', 'lequocviet123', 'lequocviet@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID002', 'R001', N'Nguyễn Văn Nguyên', 'nguyenvannguyen123', 'nguyenvannguyen@gmail.com');
+VALUES ('UID000002', 'R001', N'Nguyễn Văn Nguyên', 'nguyenvannguyen123', 'nguyenvannguyen@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID003', 'R001', N'Nguyễn Quản Trị 1', 'nguyenquantri123', 'nguyenquantri@gmail.com');
+VALUES ('UID000003', 'R001', N'Nguyễn Quản Trị 1', 'nguyenquantri123', 'nguyenquantri@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID004', 'R001', N'Nguyễn Quản Trị 2', 'nguyenquantri123', 'nguyenquantri2@gmail.com');
+VALUES ('UID000004', 'R001', N'Nguyễn Quản Trị 2', 'nguyenquantri123', 'nguyenquantri2@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID005', 'R001', N'Nguyễn Quản Trị 3', 'nguyenquantri123', 'nguyenquantri3@gmail.com');
+VALUES ('UID000005', 'R001', N'Nguyễn Quản Trị 3', 'nguyenquantri123', 'nguyenquantri3@gmail.com');
 
 
 
 
 -- Tạo tài khoản quản lý
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID006', 'R002', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
+VALUES ('UID000006', 'R002', N'Nguyễn Quản LÝ', 'nguyenquanly123', 'nguyenquanly@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID007', 'R002', N'Nguyễn Quản LÝ 2', 'nguyenquanly123', 'nguyenquanly2@gmail.com');
+VALUES ('UID000007', 'R002', N'Nguyễn Quản LÝ 2', 'nguyenquanly123', 'nguyenquanly2@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID008', 'R002', N'Nguyễn Quản LÝ 3', 'nguyenquanly123', 'nguyenquanly3@gmail.com');
+VALUES ('UID000008', 'R002', N'Nguyễn Quản LÝ 3', 'nguyenquanly123', 'nguyenquanly3@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID009', 'R002', N'Nguyễn Quản LÝ 4', 'nguyenquanly123', 'nguyenquanly4@gmail.com');
+VALUES ('UID000009', 'R002', N'Nguyễn Quản LÝ 4', 'nguyenquanly123', 'nguyenquanly4@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID010', 'R002', N'Nguyễn Quản LÝ 5', 'nguyenquanly123', 'nguyenquanly5@gmail.com');
+VALUES ('UID000010', 'R002', N'Nguyễn Quản LÝ 5', 'nguyenquanly123', 'nguyenquanly5@gmail.com');
 
 --tạo tk bác sĩ
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID011', 'R003', N'Nguyễn Bác sĩ', 'nguyenbacsi123', 'nguyenbacsi@gmail.com');
+VALUES ('UID000011', 'R003', N'Nguyễn Bác sĩ', 'nguyenbacsi123', 'nguyenbacsi@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID012', 'R003', N'Nguyễn Bác sĩ 2', 'nguyenbacsi123', 'nguyenbacsi2@gmail.com');
+VALUES ('UID000012', 'R003', N'Nguyễn Bác sĩ 2', 'nguyenbacsi123', 'nguyenbacsi2@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID013', 'R003', N'Nguyễn Bác sĩ 3', 'nguyenbacsi123', 'nguyenbacsi3@gmail.com');
+VALUES ('UID000013', 'R003', N'Nguyễn Bác sĩ 3', 'nguyenbacsi123', 'nguyenbacsi3@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID014', 'R003', N'Nguyễn Bác sĩ 4', 'nguyenbacsi123', 'nguyenbacsi4@gmail.com');
+VALUES ('UID000014', 'R003', N'Nguyễn Bác sĩ 4', 'nguyenbacsi123', 'nguyenbacsi4@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID015', 'R003', N'Nguyễn Bác sĩ 5', 'nguyenbacsi123', 'nguyenbacsi5@gmail.com');
+VALUES ('UID000015', 'R003', N'Nguyễn Bác sĩ 5', 'nguyenbacsi123', 'nguyenbacsi5@gmail.com');
 
 
 --tạo tk staff
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID016', 'R004', N'Nguyễn Nhân Viên', 'nguyennhanvien123', 'nguyennhanvien@gmail.com');
+VALUES ('UID000016', 'R004', N'Nguyễn Nhân Viên', 'nguyennhanvien123', 'nguyennhanvien@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID017', 'R004', N'Nguyễn Nhân Viên 2', 'nguyennhanvien123', 'nguyennhanvien2@gmail.com');
+VALUES ('UID000017', 'R004', N'Nguyễn Nhân Viên 2', 'nguyennhanvien123', 'nguyennhanvien2@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID018', 'R004', N'Nguyễn Nhân Viên 3', 'nguyennhanvien123', 'nguyennhanvien3@gmail.com');
+VALUES ('UID000018', 'R004', N'Nguyễn Nhân Viên 3', 'nguyennhanvien123', 'nguyennhanvien3@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID019', 'R004', N'Nguyễn Nhân Viên 4', 'nguyennhanvien123', 'nguyennhanvien4@gmail.com');
+VALUES ('UID000019', 'R004', N'Nguyễn Nhân Viên 4', 'nguyennhanvien123', 'nguyennhanvien4@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID020', 'R004', N'Nguyễn Nhân Viên 5', 'nguyennhanvien123', 'nguyennhanvien5@gmail.com');
+VALUES ('UID000020', 'R004', N'Nguyễn Nhân Viên 5', 'nguyennhanvien123', 'nguyennhanvien5@gmail.com');
 
 
 
 --tạo tk patient
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-VALUES ('UID021', 'R005', N'Nguyễn Bệnh Nhân 1', 'nguyenbenhnhan123', 'nguyenbenhnhan@gmail.com');
+VALUES ('UID000021', 'R005', N'Nguyễn Bệnh Nhân 1', 'nguyenbenhnhan123', 'nguyenbenhnhan@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email)
-VALUES ('UID022', 'R005', N'Nguyễn Bệnh Nhân 2', 'nguyenbenhnhan123', 'nguyenbenhnhan2@gmail.com');
+VALUES ('UID000022', 'R005', N'Nguyễn Bệnh Nhân 2', 'nguyenbenhnhan123', 'nguyenbenhnhan2@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email)
-VALUES ('UID023', 'R005', N'Nguyễn Bệnh Nhân 3', 'nguyenbenhnhan123', 'nguyenbenhnhan3@gmail.com');
+VALUES ('UID000023', 'R005', N'Nguyễn Bệnh Nhân 3', 'nguyenbenhnhan123', 'nguyenbenhnhan3@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email)
-VALUES ('UID024', 'R005', N'Nguyễn Bệnh Nhân 4', 'nguyenbenhnhan123', 'nguyenbenhnhan4@gmail.com');
+VALUES ('UID000024', 'R005', N'Nguyễn Bệnh Nhân 4', 'nguyenbenhnhan123', 'nguyenbenhnhan4@gmail.com');
 INSERT INTO Users (UserID, RoleID, Fullname, Password, Email)
-VALUES ('UID025', 'R005', N'Nguyễn Bệnh Nhân 5', 'nguyenbenhnhan123', 'nguyenbenhnhan5@gmail.com');
-
+VALUES ('UID000025', 'R005', N'Nguyễn Bệnh Nhân 5', 'nguyenbenhnhan123', 'nguyenbenhnhan5@gmail.com');
 
 
 -- Thêm dữ liệu vào bảng Doctors
 INSERT INTO Doctors (DoctorID, UserID, Specialization, LicenseNumber, ExperienceYears) 
-VALUES ('DT001', 'UID011', N'Miễn dịch', 'LIC123456', 10);
-
+VALUES ('DT000001', 'UID011', N'Miễn dịch', 'LIC123456', 10);
 INSERT INTO Doctors (DoctorID, UserID, Specialization, LicenseNumber, ExperienceYears) 
-VALUES ('DT002', 'UID012', N'Bệnh truyền nhiễm', 'LIC789012', 15);
+VALUES ('DT000002', 'UID012', N'Bệnh truyền nhiễm', 'LIC789012', 15);
 
 
-/*
-select * from Roles
+
+/*select * from Roles
 select * from Doctors
 select * from Patients
 select * from Users where RoleID = 'R005'
-
+select * from Services
+select * from Doctors
+*/
 
 
 -- Thêm dữ liệu vào bảng Patients
 INSERT INTO Patients (PatientID, UserID, DateOfBirth, Gender, Phone, BloodType, Allergy) 
-VALUES ('PT001', 'UID021', '15-05-1980', N'Nam', '0901234567', 'O+', N'Không có');
-
+VALUES ('PT000001', 'UID021', '15-05-1980', N'Nam', '0901234567', 'O+', N'Không có');
 INSERT INTO Patients (PatientID, UserID, DateOfBirth, Gender, Phone, BloodType, Allergy) 
-VALUES ('PT002', 'UID022', '20-10-1990', N'Nữ', '0912345678', 'A+', N'Dị ứng với penicillin');
-
+VALUES ('PT000002', 'UID022', '20-10-1990', N'Nữ', '0912345678', 'A+', N'Dị ứng với penicillin');
 INSERT INTO Patients (PatientID, UserID, DateOfBirth, Gender, Phone, BloodType, Allergy) 
-VALUES ('PT003', 'UID023', '08-03-1975', N'Nam', '0923456789', 'B-', N'Dị ứng với hải sản');
+VALUES ('PT000003', 'UID023', '08-03-1975', N'Nam', '0923456789', 'B-', N'Dị ứng với hải sản');
 
 -- Thêm dữ liệu vào bảng Services
 INSERT INTO Services (ServiceID, ServiceName, Type, Price) 
-VALUES ('SV001', N'Khám tổng quát', N'Khám bệnh', 500000);
+VALUES ('SV000001', N'Khám tổng quát', N'Khám bệnh', 700000);
+INSERT INTO Services (ServiceID, ServiceName, Type, Price) 
+VALUES ('SV000002', N'Tư vấn điều trị', N'Tư vấn', 300000);
+INSERT INTO Services (ServiceID, ServiceName, Type, Price) 
+VALUES ('SV000003', N'Xét nghiệm HIV', N'Xét nghiệm', 1500000);
+INSERT INTO Services (ServiceID, ServiceName, Type, Price) 
+VALUES ('SV000004', N'Xét nghiệm CD4', N'Xét nghiệm', 850000);
+INSERT INTO Services (ServiceID, ServiceName, Type, Price) 
+VALUES ('SV000005', N'Tư vấn điều trị ARV', N'Tư vấn', 400000);
+INSERT INTO Services (ServiceID, ServiceName, Type, Price) 
+VALUES ('SV000006', N'Xét nghiệm tải lượng virus', N'Xét nghiệm', 1000000);
 
-INSERT INTO Services (ServiceID, ServiceName, Type, Price) 
-VALUES ('SV002', N'Tư vấn dinh dưỡng', N'Tư vấn', 300000);
-/*
-INSERT INTO Services (ServiceID, ServiceName, Type, Price) 
-VALUES ('SRV0000003', N'Xét nghiệm CD4', N'Xét nghiệm', 850000);
-
-INSERT INTO Services (ServiceID, ServiceName, Type, Price) 
-VALUES ('SRV0000004', N'Tư vấn điều trị ARV', N'Tư vấn', 400000);
-
-INSERT INTO Services (ServiceID, ServiceName, Type, Price) 
-VALUES ('SRV0000005', N'Xét nghiệm tải lượng virus', N'Xét nghiệm', 950000);
-*/
 -- Thêm dữ liệu vào bảng DoctorServices
 INSERT INTO DoctorServices (DoctorServiceID, DoctorID, ServiceID) 
-VALUES ('DSV0000001', 'DOC0000001', 'SRV0000001');
-
+VALUES ('DSV000001', 'DT001', 'SV000004');
 INSERT INTO DoctorServices (DoctorServiceID, DoctorID, ServiceID) 
-VALUES ('DSV0000002', 'DOC0000001', 'SRV0000002');
-
+VALUES ('DSV000002', 'DT001', 'SV000005');
 INSERT INTO DoctorServices (DoctorServiceID, DoctorID, ServiceID) 
-VALUES ('DSV0000003', 'DOC0000002', 'SRV0000003');
-
+VALUES ('DSV000003', 'DT002', 'SV000005');
 INSERT INTO DoctorServices (DoctorServiceID, DoctorID, ServiceID) 
-VALUES ('DSV0000004', 'DOC0000002', 'SRV0000004');
-
+VALUES ('DSV000004', 'DT002', 'SV000004');
 INSERT INTO DoctorServices (DoctorServiceID, DoctorID, ServiceID) 
-VALUES ('DSV0000005', 'DOC0000002', 'SRV0000005');
+VALUES ('DSV000005', 'DT002', 'SV000005');
 
 -- Thêm dữ liệu vào bảng Slot
 INSERT INTO Slot (SlotID, SlotNumber, StartTime, EndTime) 
-VALUES ('SLT0000001', 1, '08:00', '08:30');
-
+VALUES ('SL000001', 1, '07:00', '9:30');
 INSERT INTO Slot (SlotID, SlotNumber, StartTime, EndTime) 
-VALUES ('SLT0000002', 2, '08:30', '09:00');
-
+VALUES ('SL000002', 2, '09:30', '12:00');
 INSERT INTO Slot (SlotID, SlotNumber, StartTime, EndTime) 
-VALUES ('SLT0000003', 3, '09:00', '09:30');
-
+VALUES ('SL000003', 3, '12:00', '14:30');
 INSERT INTO Slot (SlotID, SlotNumber, StartTime, EndTime) 
-VALUES ('SLT0000004', 4, '09:30', '10:00');
-
+VALUES ('SL000004', 4, '14:30', '17:00');
 INSERT INTO Slot (SlotID, SlotNumber, StartTime, EndTime) 
-VALUES ('SLT0000005', 5, '10:00', '10:30');
+VALUES ('SL000005', 5, '17:00', '19:30');
+INSERT INTO Slot (SlotID, SlotNumber, StartTime, EndTime) 
+VALUES ('SL000006', 6, '19:30', '22:00');
 
 -- Thêm dữ liệu vào bảng DoctorWorkSchedule
 INSERT INTO DoctorWorkSchedule (ScheduleID, DoctorID, SlotID, DayOfWeek, Status) 
-VALUES ('SCH0000001', 'DOC0000001', 'SLT0000001', N'Thứ hai', N'Khả dụng');
-
+VALUES ('SCH000001', 'DT000001', 'SL000001', N'Thứ hai', N'Khả dụng');
 INSERT INTO DoctorWorkSchedule (ScheduleID, DoctorID, SlotID, DayOfWeek, Status) 
-VALUES ('SCH0000002', 'DOC0000001', 'SLT0000002', N'Thứ hai', N'Khả dụng');
-
+VALUES ('SCH000002', 'DT000001', 'SL000002', N'Thứ hai', N'Khả dụng');
 INSERT INTO DoctorWorkSchedule (ScheduleID, DoctorID, SlotID, DayOfWeek, Status) 
-VALUES ('SCH0000003', 'DOC0000002', 'SLT0000003', N'Thứ ba', N'Khả dụng');
-
+VALUES ('SCH000003', 'DT000002', 'SL000003', N'Thứ ba', N'Khả dụng');
 INSERT INTO DoctorWorkSchedule (ScheduleID, DoctorID, SlotID, DayOfWeek, Status) 
-VALUES ('SCH0000004', 'DOC0000002', 'SLT0000004', N'Thứ ba', N'Khả dụng');
-
+VALUES ('SCH000004', 'DT000002', 'SL000004', N'Thứ ba', N'Khả dụng');
 INSERT INTO DoctorWorkSchedule (ScheduleID, DoctorID, SlotID, DayOfWeek, Status) 
-VALUES ('SCH0000005', 'DOC0000002', 'SLT0000005', N'Thứ tư', N'Khả dụng');
+VALUES ('SCH000005', 'DT000002', 'SL000005', N'Thứ tư', N'Không khả dụng');
+
 
 -- Thêm dữ liệu vào bảng Books
 INSERT INTO Books (BookID, PatientID, DoctorID, ServiceID, BookDate, Status, Note) 
-VALUES ('BOK0000001', 'PAT0000001', 'DOC0000001', 'SRV0000001', '2025-06-10 08:00:00', N'Đã xác nhận', N'Khám định kỳ');
-
+VALUES ('BK000001', 'PT000001', 'DT000001', 'SV000001', '2025-06-10 08:00:00', N'Đã xác nhận', N'Khám định kỳ');
 INSERT INTO Books (BookID, PatientID, DoctorID, ServiceID, BookDate, Status, Note) 
-VALUES ('BOK0000002', 'PAT0000002', 'DOC0000002', 'SRV0000003', '2025-06-12 09:00:00', N'Đã xác nhận', N'Xét nghiệm thường niên');
-
+VALUES ('BK000002', 'PT000002', 'DT000002', 'SV000003', '2025-06-12 09:00:00', N'Đã xác nhận', N'Xét nghiệm thường niên');
 INSERT INTO Books (BookID, PatientID, DoctorID, ServiceID, BookDate, Status, Note) 
-VALUES ('BOK0000003', 'PAT0000003', 'DOC0000002', 'SRV0000004', '2025-06-15 10:00:00', N'Đang chờ', N'Tư vấn lần đầu');
+VALUES ('BK000003', 'PT000003', 'DT000002', 'SV000004', '2025-06-15 10:00:00', N'Đang chờ', N'Tư vấn lần đầu');
 
 -- Thêm dữ liệu vào bảng Appointment (lịch khám trực tiếp)
 INSERT INTO Appointment (AppointmentID, BookID, AppointmentDate, Status) 
-VALUES ('APT0000001', 'BOK0000001', '2025-06-10', N'Đã lên lịch');
-
+VALUES ('AP000001', 'BK000001', '2025-06-10 09:00:00', N'Đã lên lịch');
 INSERT INTO Appointment (AppointmentID, BookID, AppointmentDate, Status) 
-VALUES ('APT0000002', 'BOK0000002', '2025-06-12', N'Đã lên lịch');
+VALUES ('AP000002', 'BK000002', '2025-06-12 07:00:00', N'Đã lên lịch');
 
 -- Thêm dữ liệu vào bảng Consultation (lịch tư vấn online)
 INSERT INTO Consultation (ConsultationID, BookID, Diagnosis, LinkMeet, ConsultationDate) 
-VALUES ('CON0000001', 'BOK0000003', NULL, 'https://meet.google.com/abc-defg-hij', '2025-06-15 10:00:00');
+VALUES ('CN000001', 'BK000003', NULL, 'https://meet.google.com/abc-defg-hij', '2025-06-15 10:00:00');
 
 -- Thêm dữ liệu vào bảng MedicalRecord
 INSERT INTO MedicalRecord (MedicalRecordID, PatientID, DoctorID, Diagnosis, CreatedDate, TreatmentResult) 
-VALUES ('MED0000001', 'PAT0000001', 'DOC0000001', N'Tình trạng sức khỏe ổn định', '2025-05-10 09:15:00', N'Tiếp tục theo dõi');
-
+VALUES ('MR000001', 'PT000001', 'DT000001', N'Tình trạng sức khỏe ổn định', '2025-05-10 09:15:00', N'Tiếp tục theo dõi');
 INSERT INTO MedicalRecord (MedicalRecordID, PatientID, DoctorID, Diagnosis, CreatedDate, TreatmentResult) 
-VALUES ('MED0000002', 'PAT0000002', 'DOC0000002', N'Nhiễm HIV giai đoạn sớm', '2025-05-15 10:30:00', N'Bắt đầu điều trị ARV');
+VALUES ('MR000002', 'PT000002', 'DT000002', N'Nhiễm HIV giai đoạn đầu', '2025-05-15 10:30:00', N'Bắt đầu điều trị ARV');
 
 -- Thêm dữ liệu vào bảng Medication
 INSERT INTO Medication (MedicationID, MedicationName, DosageForm, Strength, TargetGroup, CreatedAt) 
-VALUES ('MED0000001', N'Tenofovir', N'Viên nén', '300mg', N'Người trưởng thành', '2025-01-01 00:00:00');
-
+VALUES ('MD000001', N'Tenofovir', N'Viên nén', '300mg', N'Người trưởng thành', '2025-02-01 12:20:16');
 INSERT INTO Medication (MedicationID, MedicationName, DosageForm, Strength, TargetGroup, CreatedAt) 
-VALUES ('MED0000002', N'Lamivudine', N'Viên nén', '150mg', N'Người trưởng thành', '2025-01-01 00:00:00');
-
+VALUES ('MD000002', N'Lamivudine', N'Viên nén', '150mg', N'Người trưởng thành', '2025-02-01 10:02:00');
 INSERT INTO Medication (MedicationID, MedicationName, DosageForm, Strength, TargetGroup, CreatedAt) 
-VALUES ('MED0000003', N'Efavirenz', N'Viên nén', '600mg', N'Người trưởng thành', '2025-01-01 00:00:00');
+VALUES ('MD000003', N'Efavirenz', N'Viên nén', '600mg', N'Người trưởng thành', '2025-02-01 10:03:00');
 
 -- Thêm dữ liệu vào bảng Prescription
 INSERT INTO Prescription (PrescriptionID, MedicalRecordID, MedicationID, DoctorID, StartDate, EndDate, Dosage, LineOfTreatment, CreatedAt) 
-VALUES ('PRE0000001', 'MED0000002', 'MED0000001', 'DOC0000002', '2025-05-15', '2025-08-15', N'1 viên mỗi ngày', N'Đầu tiên', '2025-05-15 10:45:00');
-
+VALUES ('PR000001', 'MR000002', 'MD000001', 'DT000002', '2025-05-15', '2025-08-15', N'1 viên mỗi ngày', N'Đầu tiên', '2025-05-15 10:45:00');
 INSERT INTO Prescription (PrescriptionID, MedicalRecordID, MedicationID, DoctorID, StartDate, EndDate, Dosage, LineOfTreatment, CreatedAt) 
-VALUES ('PRE0000002', 'MED0000002', 'MED0000002', 'DOC0000002', '2025-05-15', '2025-08-15', N'1 viên mỗi ngày', N'Đầu tiên', '2025-05-15 10:45:00');
+VALUES ('PR000002', 'MR000002', 'MD000002', 'DT000002', '2025-05-15', '2025-08-15', N'1 viên mỗi ngày', N'Đầu tiên', '2025-05-15 10:45:00');
 
 -- Thêm dữ liệu vào bảng ARVRegimen
 INSERT INTO ARVRegimen (ARVRegimenID, MedicalRecordID, DoctorID, RegimenCode, ARVName, Description, AgeRange, ForGroup, CreatedAt) 
-VALUES ('ARV0000001', 'MED0000002', 'DOC0000002', 'TDF+3TC+EFV', N'Tenofovir + Lamivudine + Efavirenz', N'Phác đồ bậc 1 cho người mới điều trị', N'Trên 15 tuổi', N'Người lớn', '2025-05-15 10:50:00');
+VALUES ('ARV000001', 'MR000002', 'DT000002', 'TDF+3TC+EFV', N'Tenofovir + Lamivudine + Efavirenz', N'Phác đồ bậc 1 cho người mới điều trị', N'Trên 15 tuổi', N'Người lớn', '2025-05-15 10:50:00');
 
 -- Thêm dữ liệu vào bảng HIVTest
 INSERT INTO HIVTest (TestResultID, MedicalRecordID, TestDate, CD4Count, ViralLoad, Notes) 
-VALUES ('HIV0000001', 'MED0000002', '2025-05-14', 450, 10000, N'Xét nghiệm trước khi bắt đầu điều trị');
+VALUES ('HT000001', 'MR000002', '2025-05-14', 450, 10000, N'Xét nghiệm trước khi bắt đầu điều trị');
 
 -- Thêm dữ liệu vào bảng Reminder
 INSERT INTO Reminder (ReminderCheckID, PatientID, AppointmentID, ReminderTime, Message) 
-VALUES ('REM0000001', 'PAT0000001', 'APT0000001', '2025-06-09 10:00:00', N'Nhắc nhở: Lịch khám ngày mai lúc 08:00');
-
+VALUES ('REC000001', 'PT000001', 'AP000001', '2025-06-09 09:09:00', N'Nhắc nhở: Lịch khám ngày mai lúc 07:00');
 INSERT INTO Reminder (ReminderCheckID, PatientID, AppointmentID, ReminderTime, Message) 
-VALUES ('REM0000002', 'PAT0000002', 'APT0000002', '2025-06-11 10:00:00', N'Nhắc nhở: Lịch xét nghiệm CD4 ngày mai lúc 09:00');
+VALUES ('REC000002', 'PT000002', 'AP000002', '2025-06-11 10:15:00', N'Nhắc nhở: Lịch xét nghiệm CD4 ngày mai lúc 09:00');
 
 -- Thêm dữ liệu vào bảng ReminderMedication
 INSERT INTO ReminderMedication (ReminderMedicationID, PatientID, PrescriptionID, DosageTime, Instruction, MedicationInUse) 
-VALUES ('RMD0000001', 'PAT0000002', 'PRE0000001', '08:00', N'Uống sau bữa sáng', N'Tenofovir đang sử dụng');
-
+VALUES ('REM000001', 'PT000002', 'PR000001', '08:00', N'Uống sau bữa sáng', N'Tenofovir đang sử dụng');
 INSERT INTO ReminderMedication (ReminderMedicationID, PatientID, PrescriptionID, DosageTime, Instruction, MedicationInUse) 
-VALUES ('RMD0000002', 'PAT0000002', 'PRE0000002', '08:00', N'Uống sau bữa sáng', N'Lamivudine đang sử dụng');
+VALUES ('REM000002', 'PT000002', 'PR000002', '08:00', N'Uống sau bữa sáng', N'Lamivudine đang sử dụng');
 
+
+/*
 -- Xác nhận số lượng dữ liệu đã thêm vào mỗi bảng
 SELECT 'Roles' AS TableName, COUNT(*) AS RecordCount FROM Roles
 UNION ALL
