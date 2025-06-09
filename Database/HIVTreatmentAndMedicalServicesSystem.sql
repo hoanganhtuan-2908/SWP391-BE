@@ -425,9 +425,9 @@ VALUES ('UID000025', 'R005', N'Nguyễn Bệnh Nhân 5', 'nguyenbenhnhan123', 'n
 
 -- Thêm dữ liệu vào bảng Doctors
 INSERT INTO Doctors (DoctorID, UserID, Specialization, LicenseNumber, ExperienceYears) 
-VALUES ('DT000001', 'UID011', N'Miễn dịch', 'LIC123456', 10);
+VALUES ('DT000001', 'UID000011', N'Miễn dịch', 'LIC123456', 10);
 INSERT INTO Doctors (DoctorID, UserID, Specialization, LicenseNumber, ExperienceYears) 
-VALUES ('DT000002', 'UID012', N'Bệnh truyền nhiễm', 'LIC789012', 15);
+VALUES ('DT000002', 'UID000012', N'Bệnh truyền nhiễm', 'LIC789012', 15);
 
 
 
@@ -442,11 +442,11 @@ select * from Doctors
 
 -- Thêm dữ liệu vào bảng Patients
 INSERT INTO Patients (PatientID, UserID, DateOfBirth, Gender, Phone, BloodType, Allergy) 
-VALUES ('PT000001', 'UID021', '15-05-1980', N'Nam', '0901234567', 'O+', N'Không có');
+VALUES ('PT000001', 'UID000021', '15-05-1980', N'Nam', '0901234567', 'O+', N'Không có');
 INSERT INTO Patients (PatientID, UserID, DateOfBirth, Gender, Phone, BloodType, Allergy) 
-VALUES ('PT000002', 'UID022', '20-10-1990', N'Nữ', '0912345678', 'A+', N'Dị ứng với penicillin');
+VALUES ('PT000002', 'UID000022', '20-10-1990', N'Nữ', '0912345678', 'A+', N'Dị ứng với penicillin');
 INSERT INTO Patients (PatientID, UserID, DateOfBirth, Gender, Phone, BloodType, Allergy) 
-VALUES ('PT000003', 'UID023', '08-03-1975', N'Nam', '0923456789', 'B-', N'Dị ứng với hải sản');
+VALUES ('PT000003', 'UID000023', '08-03-1975', N'Nam', '0923456789', 'B-', N'Dị ứng với hải sản');
 
 -- Thêm dữ liệu vào bảng Services
 INSERT INTO Services (ServiceID, ServiceName, Type, Price) 
@@ -464,15 +464,15 @@ VALUES ('SV000006', N'Xét nghiệm tải lượng virus', N'Xét nghiệm', 100
 
 -- Thêm dữ liệu vào bảng DoctorServices
 INSERT INTO DoctorServices (DoctorServiceID, DoctorID, ServiceID) 
-VALUES ('DSV000001', 'DT001', 'SV000004');
+VALUES ('DSV000001', 'DT000001', 'SV000004');
 INSERT INTO DoctorServices (DoctorServiceID, DoctorID, ServiceID) 
-VALUES ('DSV000002', 'DT001', 'SV000005');
+VALUES ('DSV000002', 'DT000001', 'SV000005');
 INSERT INTO DoctorServices (DoctorServiceID, DoctorID, ServiceID) 
-VALUES ('DSV000003', 'DT002', 'SV000005');
+VALUES ('DSV000003', 'DT000002', 'SV000005');
 INSERT INTO DoctorServices (DoctorServiceID, DoctorID, ServiceID) 
-VALUES ('DSV000004', 'DT002', 'SV000004');
+VALUES ('DSV000004', 'DT000002', 'SV000004');
 INSERT INTO DoctorServices (DoctorServiceID, DoctorID, ServiceID) 
-VALUES ('DSV000005', 'DT002', 'SV000005');
+VALUES ('DSV000005', 'DT000002', 'SV000006');
 
 -- Thêm dữ liệu vào bảng Slot
 INSERT INTO Slot (SlotID, SlotNumber, StartTime, EndTime) 
@@ -503,11 +503,11 @@ VALUES ('SCH000005', 'DT000002', 'SL000005', N'Thứ tư', N'Không khả dụng
 
 -- Thêm dữ liệu vào bảng Books
 INSERT INTO Books (BookID, PatientID, DoctorID, ServiceID, BookDate, Status, Note) 
-VALUES ('BK000001', 'PT000001', 'DT000001', 'SV000001', '2025-06-10 08:00:00', N'Đã xác nhận', N'Khám định kỳ');
+VALUES ('BK000001', 'PT000001', 'DT000001', 'SV000001', '10-06-2025 08:00:00', N'Đã xác nhận', N'Khám định kỳ');
 INSERT INTO Books (BookID, PatientID, DoctorID, ServiceID, BookDate, Status, Note) 
-VALUES ('BK000002', 'PT000002', 'DT000002', 'SV000003', '2025-06-12 09:00:00', N'Đã xác nhận', N'Xét nghiệm thường niên');
+VALUES ('BK000002', 'PT000002', 'DT000002', 'SV000003', '12-06-2025 09:00:00', N'Đã xác nhận', N'Xét nghiệm thường niên');
 INSERT INTO Books (BookID, PatientID, DoctorID, ServiceID, BookDate, Status, Note) 
-VALUES ('BK000003', 'PT000003', 'DT000002', 'SV000004', '2025-06-15 10:00:00', N'Đang chờ', N'Tư vấn lần đầu');
+VALUES ('BK000003', 'PT000003', 'DT000002', 'SV000004', '15-06-2025 10:00:00', N'Đang chờ', N'Tư vấn lần đầu');
 
 -- Thêm dữ liệu vào bảng Appointment (lịch khám trực tiếp)
 INSERT INTO Appointment (AppointmentID, BookID, AppointmentDate, Status) 
@@ -517,13 +517,13 @@ VALUES ('AP000002', 'BK000002', '2025-06-12 07:00:00', N'Đã lên lịch');
 
 -- Thêm dữ liệu vào bảng Consultation (lịch tư vấn online)
 INSERT INTO Consultation (ConsultationID, BookID, Diagnosis, LinkMeet, ConsultationDate) 
-VALUES ('CN000001', 'BK000003', NULL, 'https://meet.google.com/abc-defg-hij', '2025-06-15 10:00:00');
+VALUES ('CN000001', 'BK000003', NULL, 'https://meet.google.com/abc-defg-hij', '15-06-2025 10:00:00');
 
 -- Thêm dữ liệu vào bảng MedicalRecord
 INSERT INTO MedicalRecord (MedicalRecordID, PatientID, DoctorID, Diagnosis, CreatedDate, TreatmentResult) 
-VALUES ('MR000001', 'PT000001', 'DT000001', N'Tình trạng sức khỏe ổn định', '2025-05-10 09:15:00', N'Tiếp tục theo dõi');
+VALUES ('MR000001', 'PT000001', 'DT000001', N'Tình trạng sức khỏe ổn định', '10-05-2025 09:15:00', N'Tiếp tục theo dõi');
 INSERT INTO MedicalRecord (MedicalRecordID, PatientID, DoctorID, Diagnosis, CreatedDate, TreatmentResult) 
-VALUES ('MR000002', 'PT000002', 'DT000002', N'Nhiễm HIV giai đoạn đầu', '2025-05-15 10:30:00', N'Bắt đầu điều trị ARV');
+VALUES ('MR000002', 'PT000002', 'DT000002', N'Nhiễm HIV giai đoạn đầu', '15-05-2025 10:30:00', N'Bắt đầu điều trị ARV');
 
 -- Thêm dữ liệu vào bảng Medication
 INSERT INTO Medication (MedicationID, MedicationName, DosageForm, Strength, TargetGroup, CreatedAt) 
@@ -535,23 +535,23 @@ VALUES ('MD000003', N'Efavirenz', N'Viên nén', '600mg', N'Người trưởng t
 
 -- Thêm dữ liệu vào bảng Prescription
 INSERT INTO Prescription (PrescriptionID, MedicalRecordID, MedicationID, DoctorID, StartDate, EndDate, Dosage, LineOfTreatment, CreatedAt) 
-VALUES ('PR000001', 'MR000002', 'MD000001', 'DT000002', '2025-05-15', '2025-08-15', N'1 viên mỗi ngày', N'Đầu tiên', '2025-05-15 10:45:00');
+VALUES ('PR000001', 'MR000002', 'MD000001', 'DT000002', '15-05-2025', '15-08-2025', N'1 viên mỗi ngày', N'Đầu tiên', '15-05-2025 10:45:00');
 INSERT INTO Prescription (PrescriptionID, MedicalRecordID, MedicationID, DoctorID, StartDate, EndDate, Dosage, LineOfTreatment, CreatedAt) 
-VALUES ('PR000002', 'MR000002', 'MD000002', 'DT000002', '2025-05-15', '2025-08-15', N'1 viên mỗi ngày', N'Đầu tiên', '2025-05-15 10:45:00');
+VALUES ('PR000002', 'MR000002', 'MD000002', 'DT000002', '15-05-2025', '15-08-2025', N'1 viên mỗi ngày', N'Đầu tiên', '15-05-2025 10:45:00');
 
 -- Thêm dữ liệu vào bảng ARVRegimen
 INSERT INTO ARVRegimen (ARVRegimenID, MedicalRecordID, DoctorID, RegimenCode, ARVName, Description, AgeRange, ForGroup, CreatedAt) 
-VALUES ('ARV000001', 'MR000002', 'DT000002', 'TDF+3TC+EFV', N'Tenofovir + Lamivudine + Efavirenz', N'Phác đồ bậc 1 cho người mới điều trị', N'Trên 15 tuổi', N'Người lớn', '2025-05-15 10:50:00');
+VALUES ('ARV000001', 'MR000002', 'DT000002', 'TDF+3TC+EFV', N'Tenofovir + Lamivudine + Efavirenz', N'Phác đồ bậc 1 cho người mới điều trị', N'Trên 15 tuổi', N'Người lớn', '15-05-2025 10:50:00');
 
 -- Thêm dữ liệu vào bảng HIVTest
 INSERT INTO HIVTest (TestResultID, MedicalRecordID, TestDate, CD4Count, ViralLoad, Notes) 
-VALUES ('HT000001', 'MR000002', '2025-05-14', 450, 10000, N'Xét nghiệm trước khi bắt đầu điều trị');
+VALUES ('HT000001', 'MR000002', '15-05-2025', 450, 10000, N'Xét nghiệm trước khi bắt đầu điều trị');
 
 -- Thêm dữ liệu vào bảng Reminder
 INSERT INTO Reminder (ReminderCheckID, PatientID, AppointmentID, ReminderTime, Message) 
-VALUES ('REC000001', 'PT000001', 'AP000001', '2025-06-09 09:09:00', N'Nhắc nhở: Lịch khám ngày mai lúc 07:00');
+VALUES ('REC000001', 'PT000001', 'AP000001', '09-06-2025 09:09:00', N'Nhắc nhở: Lịch khám ngày mai lúc 07:00');
 INSERT INTO Reminder (ReminderCheckID, PatientID, AppointmentID, ReminderTime, Message) 
-VALUES ('REC000002', 'PT000002', 'AP000002', '2025-06-11 10:15:00', N'Nhắc nhở: Lịch xét nghiệm CD4 ngày mai lúc 09:00');
+VALUES ('REC000002', 'PT000002', 'AP000002', '15-08-2025 10:15:00', N'Nhắc nhở: Lịch xét nghiệm CD4 ngày mai lúc 09:00');
 
 -- Thêm dữ liệu vào bảng ReminderMedication
 INSERT INTO ReminderMedication (ReminderMedicationID, PatientID, PrescriptionID, DosageTime, Instruction, MedicationInUse) 
@@ -560,7 +560,12 @@ INSERT INTO ReminderMedication (ReminderMedicationID, PatientID, PrescriptionID,
 VALUES ('REM000002', 'PT000002', 'PR000002', '08:00', N'Uống sau bữa sáng', N'Lamivudine đang sử dụng');
 
 
+
 /*
+select * from DoctorServices
+select * from DoctorWorkSchedule
+select * from ARVRegimen
+
 -- Xác nhận số lượng dữ liệu đã thêm vào mỗi bảng
 SELECT 'Roles' AS TableName, COUNT(*) AS RecordCount FROM Roles
 UNION ALL
