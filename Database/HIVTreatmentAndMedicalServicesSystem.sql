@@ -1,10 +1,26 @@
--- Tạo Database
-CREATE DATABASE MedicalSystem;
+USE master;
 GO
 
-USE MedicalSystem;
+-- Kiểm tra nếu database HIVCareDB đã tồn tại
+IF EXISTS (SELECT name FROM sys.databases WHERE name = 'HIVTreatmentAndMedicalServicesSystem')
+BEGIN
+    -- Nếu tồn tại thì hủy tất cả kết nối và xóa
+    ALTER DATABASE HIVTreatmentAndMedicalServicesSystem SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    DROP DATABASE HIVTreatmentAndMedicalServicesSystem;
+    PRINT 'Database HIVTreatmentAndMedicalServicesSystem đã tồn tại và đã được xóa.';
+END
+
+-- Tạo database mới
+CREATE DATABASE HIVTreatmentAndMedicalServicesSystem;
 GO
 
+PRINT 'Database HIVTreatmentAndMedicalServicesSystem đã được tạo mới.';
+GO
+
+-- Chuyển sang sử dụng database vừa tạo
+USE HIVTreatmentAndMedicalServicesSystem
+
+go
 set dateformat dmy
 
 -- USERS & ROLES
@@ -15,31 +31,34 @@ CREATE TABLE Roles (
 
 CREATE TABLE Users (
     UserID VARCHAR(10) PRIMARY KEY,
-    RoleID VARCHAR(10) FOREIGN KEY REFERENCES Roles(RoleID),
+    RoleID VARCHAR(10) NOT NULL,
     Fullname NVARCHAR(100) NOT NULL,
     Password VARCHAR(255) NOT NULL,
     Email VARCHAR(100) UNIQUE NOT NULL,
-	Image VARCHAR(100)
+    Image VARCHAR(100),
+    FOREIGN KEY (RoleID) REFERENCES Roles(RoleID)
 );
 
 -- PATIENTS
 CREATE TABLE Patients (
     PatientID VARCHAR(10) PRIMARY KEY,
-    UserID VARCHAR(10) FOREIGN KEY REFERENCES Users(UserID),
+    UserID VARCHAR(10) NOT NULL,
     DateOfBirth DATE,
     Gender NVARCHAR(20),
     Phone VARCHAR(20),
     BloodType VARCHAR(10),
-    Allergy NVARCHAR(MAX)
+    Allergy NVARCHAR(MAX),
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
 );
 
 -- DOCTORS
 CREATE TABLE Doctors (
     DoctorID VARCHAR(10) PRIMARY KEY,
-    UserID VARCHAR(10) FOREIGN KEY REFERENCES Users(UserID),
+    UserID VARCHAR(10) NOT NULL,
     Specialization NVARCHAR(100),
     LicenseNumber NVARCHAR(50) UNIQUE,
-    ExperienceYears INT
+    ExperienceYears INT,
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
 );
 
 -- SERVICES
@@ -52,9 +71,11 @@ CREATE TABLE Services (
 
 CREATE TABLE DoctorServices (
     DoctorServiceID VARCHAR(10) PRIMARY KEY,
-    DoctorID VARCHAR(10) FOREIGN KEY REFERENCES Doctors(DoctorID),
-    ServiceID VARCHAR(10) FOREIGN KEY REFERENCES Services(ServiceID),
-    CONSTRAINT UK_DoctorService UNIQUE (DoctorID, ServiceID)
+    DoctorID VARCHAR(10) NOT NULL,
+    ServiceID VARCHAR(10) NOT NULL,
+    CONSTRAINT UK_DoctorService UNIQUE (DoctorID, ServiceID),
+    FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID),
+    FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID)
 );
 
 -- SLOTS
@@ -68,46 +89,40 @@ CREATE TABLE Slot (
 -- DOCTOR SCHEDULE
 CREATE TABLE DoctorWorkSchedule (
     ScheduleID VARCHAR(10) PRIMARY KEY,
-    DoctorID VARCHAR(10) FOREIGN KEY REFERENCES Doctors(DoctorID),
-    SlotID VARCHAR(10) FOREIGN KEY REFERENCES Slot(SlotID),
+    DoctorID VARCHAR(10) NOT NULL,
+    SlotID VARCHAR(10) NOT NULL,
     DayOfWeek NVARCHAR(10),
-    Status NVARCHAR(20)
+    Status NVARCHAR(20),
+    FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID),
+    FOREIGN KEY (SlotID) REFERENCES Slot(SlotID)
 );
 
--- SCHEDULING & APPOINTMENTS
+-- SCHEDULING & BOOKS
 CREATE TABLE Books (
     BookID VARCHAR(10) PRIMARY KEY,
-    PatientID VARCHAR(10) FOREIGN KEY REFERENCES Patients(PatientID),
-    DoctorID VARCHAR(10) FOREIGN KEY REFERENCES Doctors(DoctorID),
-    ServiceID VARCHAR(10) FOREIGN KEY REFERENCES Services(ServiceID),
+    PatientID VARCHAR(10) NOT NULL,
+    DoctorID VARCHAR(10) NOT NULL,
+    ServiceID VARCHAR(10) NOT NULL,
     BookDate DATETIME NOT NULL,
     Status NVARCHAR(20),
-    Note NVARCHAR(MAX)
-);
-
-CREATE TABLE Appointment (
-    AppointmentID VARCHAR(10) PRIMARY KEY,
-    BookID VARCHAR(10) FOREIGN KEY REFERENCES Books(BookID),
-    AppointmentDate DATE NOT NULL,
-    Status NVARCHAR(20)
-);
-
-CREATE TABLE Consultation (
-    ConsultationID VARCHAR(10) PRIMARY KEY,
-    BookID VARCHAR(10) FOREIGN KEY REFERENCES Books(BookID),
-    Diagnosis NVARCHAR(MAX),
     LinkMeet NVARCHAR(255),
-    ConsultationDate DATETIME
+    Note NVARCHAR(MAX),
+    FOREIGN KEY (PatientID) REFERENCES Patients(PatientID),
+    FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID),
+    FOREIGN KEY (ServiceID) REFERENCES Services(ServiceID)
 );
+
 
 -- MEDICAL RECORDS
 CREATE TABLE MedicalRecord (
     MedicalRecordID VARCHAR(10) PRIMARY KEY,
-    PatientID VARCHAR(10) FOREIGN KEY REFERENCES Patients(PatientID),
-    DoctorID VARCHAR(10) FOREIGN KEY REFERENCES Doctors(DoctorID),
+    PatientID VARCHAR(10) NOT NULL,
+    DoctorID VARCHAR(10) NOT NULL,
     Diagnosis NVARCHAR(MAX),
     CreatedDate DATETIME,
-    TreatmentResult NVARCHAR(MAX)
+    TreatmentResult NVARCHAR(MAX),
+    FOREIGN KEY (PatientID) REFERENCES Patients(PatientID),
+    FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID)
 );
 
 -- MEDICATION & PRESCRIPTIONS
@@ -122,230 +137,71 @@ CREATE TABLE Medication (
 
 CREATE TABLE Prescription (
     PrescriptionID VARCHAR(10) PRIMARY KEY,
-    MedicalRecordID VARCHAR(10) FOREIGN KEY REFERENCES MedicalRecord(MedicalRecordID),
-    MedicationID VARCHAR(10) FOREIGN KEY REFERENCES Medication(MedicationID),
-    DoctorID VARCHAR(10) FOREIGN KEY REFERENCES Doctors(DoctorID),
+    MedicalRecordID VARCHAR(10) NOT NULL,
+    MedicationID VARCHAR(10) NOT NULL,
+    DoctorID VARCHAR(10) NOT NULL,
     StartDate DATE NOT NULL,
     EndDate DATE,
     Dosage NVARCHAR(100),
     LineOfTreatment NVARCHAR(50),
-    CreatedAt DATETIME
+    CreatedAt DATETIME,
+    FOREIGN KEY (MedicalRecordID) REFERENCES MedicalRecord(MedicalRecordID),
+    FOREIGN KEY (MedicationID) REFERENCES Medication(MedicationID),
+    FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID)
 );
 
 -- ARV REGIMEN
 CREATE TABLE ARVRegimen (
     ARVRegimenID VARCHAR(10) PRIMARY KEY,
-    MedicalRecordID VARCHAR(10) FOREIGN KEY REFERENCES MedicalRecord(MedicalRecordID),
-    DoctorID VARCHAR(10) FOREIGN KEY REFERENCES Doctors(DoctorID),
+    MedicalRecordID VARCHAR(10) NOT NULL,
+    DoctorID VARCHAR(10) NOT NULL,
     RegimenCode NVARCHAR(50),
     ARVName NVARCHAR(100),
     Description NVARCHAR(MAX),
     AgeRange NVARCHAR(50),
     ForGroup NVARCHAR(50),
-    CreatedAt DATETIME
+    CreatedAt DATETIME,
+    FOREIGN KEY (MedicalRecordID) REFERENCES MedicalRecord(MedicalRecordID),
+    FOREIGN KEY (DoctorID) REFERENCES Doctors(DoctorID)
 );
 
 -- HIV TESTS
 CREATE TABLE HIVTest (
     TestResultID VARCHAR(10) PRIMARY KEY,
-    MedicalRecordID VARCHAR(10) FOREIGN KEY REFERENCES MedicalRecord(MedicalRecordID),
+    MedicalRecordID VARCHAR(10) NOT NULL,
     TestDate DATE NOT NULL,
     CD4Count INT,
     ViralLoad INT,
-    Notes NVARCHAR(MAX)
+    Notes NVARCHAR(MAX),
+    FOREIGN KEY (MedicalRecordID) REFERENCES MedicalRecord(MedicalRecordID)
 );
 
 -- REMINDERS
 CREATE TABLE Reminder (
     ReminderCheckID VARCHAR(10) PRIMARY KEY,
-    PatientID VARCHAR(10) FOREIGN KEY REFERENCES Patients(PatientID),
-    AppointmentID VARCHAR(10) FOREIGN KEY REFERENCES Appointment(AppointmentID),
+    PatientID VARCHAR(10) NOT NULL,
+    BookID VARCHAR(10) NOT NULL,
     ReminderTime DATETIME NOT NULL,
-    Message NVARCHAR(MAX)
+    Message NVARCHAR(MAX),
+    FOREIGN KEY (PatientID) REFERENCES Patients(PatientID),
+    FOREIGN KEY (BookID) REFERENCES Books(BookID)
 );
 
 CREATE TABLE ReminderMedication (
     ReminderMedicationID VARCHAR(10) PRIMARY KEY,
-    PatientID VARCHAR(10) FOREIGN KEY REFERENCES Patients(PatientID),
-    PrescriptionID VARCHAR(10) FOREIGN KEY REFERENCES Prescription(PrescriptionID),
+    PatientID VARCHAR(10) NOT NULL,
+    PrescriptionID VARCHAR(10) NOT NULL,
     DosageTime TIME NOT NULL,
     Instruction NVARCHAR(MAX),
-    MedicationInUse NVARCHAR(255)
+    MedicationInUse NVARCHAR(255),
+    FOREIGN KEY (PatientID) REFERENCES Patients(PatientID),
+    FOREIGN KEY (PrescriptionID) REFERENCES Prescription(PrescriptionID)
 );
-GO
-/*
--- Thêm các chỉ mục để tối ưu hiệu suất
-CREATE INDEX IX_Users_RoleID ON Users(RoleID);
-CREATE INDEX IX_Patients_UserID ON Patients(UserID);
-CREATE INDEX IX_Doctors_UserID ON Doctors(UserID);
-CREATE INDEX IX_Books_PatientID ON Books(PatientID);
-CREATE INDEX IX_Books_DoctorID ON Books(DoctorID);
-CREATE INDEX IX_Books_ServiceID ON Books(ServiceID);
-CREATE INDEX IX_MedicalRecord_PatientID ON MedicalRecord(PatientID);
-CREATE INDEX IX_MedicalRecord_DoctorID ON MedicalRecord(DoctorID);
-CREATE INDEX IX_Prescription_MedicalRecordID ON Prescription(MedicalRecordID);
-CREATE INDEX IX_Prescription_MedicationID ON Prescription(MedicationID);
-GO
 
--- Thêm các ràng buộc và giá trị mặc định
-ALTER TABLE Books
-ADD CONSTRAINT DF_Books_Status DEFAULT 'Pending' FOR Status;
 
-ALTER TABLE Appointment
-ADD CONSTRAINT DF_Appointment_Status DEFAULT 'Scheduled' FOR Status;
 
-ALTER TABLE MedicalRecord
-ADD CONSTRAINT DF_MedicalRecord_CreatedDate DEFAULT GETDATE() FOR CreatedDate;
 
-ALTER TABLE Prescription
-ADD CONSTRAINT DF_Prescription_CreatedAt DEFAULT GETDATE() FOR CreatedAt;
-
-ALTER TABLE ARVRegimen
-ADD CONSTRAINT DF_ARVRegimen_CreatedAt DEFAULT GETDATE() FOR CreatedAt;
-
-ALTER TABLE Medication
-ADD CONSTRAINT DF_Medication_CreatedAt DEFAULT GETDATE() FOR CreatedAt;
-GO
-
--- Thêm hàm để tạo ID tự động theo định dạng
-CREATE FUNCTION GenerateID(@prefix NVARCHAR(3), @lastID INT)
-RETURNS VARCHAR(10)
-AS
-BEGIN
-    RETURN @prefix + RIGHT('0000000' + CAST(@lastID + 1 AS VARCHAR(7)), 7)
-END
-GO
-
--- Stored procedure để thêm mới Role
-CREATE PROCEDURE sp_InsertRole
-    @RoleName NVARCHAR(50)
-AS
-BEGIN
-    DECLARE @LastID INT
-    DECLARE @NewRoleID VARCHAR(10)
-    
-    -- Lấy ID lớn nhất hiện tại
-    SELECT @LastID = ISNULL(MAX(CAST(SUBSTRING(RoleID, 4, 7) AS INT)), 0) FROM Roles WHERE RoleID LIKE 'ROL%'
-    
-    -- Tạo ID mới
-    SET @NewRoleID = dbo.GenerateID('ROL', @LastID)
-    
-    -- Thêm Role mới
-    INSERT INTO Roles (RoleID, RoleName) VALUES (@NewRoleID, @RoleName)
-    
-    -- Trả về ID mới
-    SELECT @NewRoleID AS RoleID
-END
-GO
-
--- Stored procedure để thêm mới User
-CREATE PROCEDURE sp_InsertUser
-    @RoleID VARCHAR(10),
-    @Fullname NVARCHAR(100),
-    @Password NVARCHAR(255),
-    @Email NVARCHAR(100)
-AS
-BEGIN
-    DECLARE @LastID INT
-    DECLARE @NewUserID VARCHAR(10)
-    
-    -- Lấy ID lớn nhất hiện tại
-    SELECT @LastID = ISNULL(MAX(CAST(SUBSTRING(UserID, 4, 7) AS INT)), 0) FROM Users WHERE UserID LIKE 'USR%'
-    
-    -- Tạo ID mới
-    SET @NewUserID = dbo.GenerateID('USR', @LastID)
-    
-    -- Thêm User mới
-    INSERT INTO Users (UserID, RoleID, Fullname, Password, Email) 
-    VALUES (@NewUserID, @RoleID, @Fullname, @Password, @Email)
-    
-    -- Trả về ID mới
-    SELECT @NewUserID AS UserID
-END
-GO
-
--- Stored procedure để đặt lịch hẹn
-CREATE PROCEDURE sp_CreateBookingAndAppointment
-    @PatientID VARCHAR(10),
-    @DoctorID VARCHAR(10),
-    @ServiceID VARCHAR(10),
-    @BookDate DATETIME,
-    @AppointmentDate DATE,
-    @Note NVARCHAR(MAX) = NULL
-AS
-BEGIN
-    DECLARE @LastBookID INT
-    DECLARE @NewBookID VARCHAR(10)
-    DECLARE @LastAppointmentID INT
-    DECLARE @NewAppointmentID VARCHAR(10)
-    
-    BEGIN TRANSACTION;
-    
-    -- Tạo ID mới cho Books
-    SELECT @LastBookID = ISNULL(MAX(CAST(SUBSTRING(BookID, 4, 7) AS INT)), 0) FROM Books WHERE BookID LIKE 'BOK%'
-    SET @NewBookID = dbo.GenerateID('BOK', @LastBookID)
-    
-    -- Tạo Books
-    INSERT INTO Books (BookID, PatientID, DoctorID, ServiceID, BookDate, Status, Note)
-    VALUES (@NewBookID, @PatientID, @DoctorID, @ServiceID, @BookDate, 'Pending', @Note);
-    
-    -- Tạo ID mới cho Appointment
-    SELECT @LastAppointmentID = ISNULL(MAX(CAST(SUBSTRING(AppointmentID, 4, 7) AS INT)), 0) FROM Appointment WHERE AppointmentID LIKE 'APT%'
-    SET @NewAppointmentID = dbo.GenerateID('APT', @LastAppointmentID)
-    
-    -- Tạo Appointment
-    INSERT INTO Appointment (AppointmentID, BookID, AppointmentDate, Status)
-    VALUES (@NewAppointmentID, @NewBookID, @AppointmentDate, 'Scheduled');
-    
-    COMMIT TRANSACTION;
-    
-    -- Trả về BookID và AppointmentID cho client
-    SELECT @NewBookID AS BookID, @NewAppointmentID AS AppointmentID;
-END
-GO
-
--- Stored procedure để đặt lịch tư vấn trực tuyến
-CREATE PROCEDURE sp_CreateBookingAndConsultation
-    @PatientID VARCHAR(10),
-    @DoctorID VARCHAR(10),
-    @ServiceID VARCHAR(10),
-    @BookDate DATETIME,
-    @ConsultationDate DATETIME,
-    @LinkMeet NVARCHAR(255),
-    @Note NVARCHAR(MAX) = NULL
-AS
-BEGIN
-    DECLARE @LastBookID INT
-    DECLARE @NewBookID VARCHAR(10)
-    DECLARE @LastConsultationID INT
-    DECLARE @NewConsultationID VARCHAR(10)
-    
-    BEGIN TRANSACTION;
-    
-    -- Tạo ID mới cho Books
-    SELECT @LastBookID = ISNULL(MAX(CAST(SUBSTRING(BookID, 4, 7) AS INT)), 0) FROM Books WHERE BookID LIKE 'BOK%'
-    SET @NewBookID = dbo.GenerateID('BOK', @LastBookID)
-    
-    -- Tạo Books
-    INSERT INTO Books (BookID, PatientID, DoctorID, ServiceID, BookDate, Status, Note)
-    VALUES (@NewBookID, @PatientID, @DoctorID, @ServiceID, @BookDate, 'Pending', @Note);
-    
-    -- Tạo ID mới cho Consultation
-    SELECT @LastConsultationID = ISNULL(MAX(CAST(SUBSTRING(ConsultationID, 4, 7) AS INT)), 0) FROM Consultation WHERE ConsultationID LIKE 'CON%'
-    SET @NewConsultationID = dbo.GenerateID('CON', @LastConsultationID)
-    
-    -- Tạo Consultation
-    INSERT INTO Consultation (ConsultationID, BookID, LinkMeet, ConsultationDate)
-    VALUES (@NewConsultationID, @NewBookID, @LinkMeet, @ConsultationDate);
-    
-    COMMIT TRANSACTION;
-    
-    -- Trả về BookID và ConsultationID cho client
-    SELECT @NewBookID AS BookID, @NewConsultationID AS ConsultationID;
-END
-GO
-
-**/
+-- Không cần thay đổi các lệnh insert đã có, vì chỉ sửa định nghĩa bảng cho chuẩn hóa và đảm bảo khóa ngoại hoạt động đúng.
 
 -- Thêm dữ liệu vào bảng Roles (sử dụng stored procedure)
 insert into Roles values ('R001', 'Admin');
@@ -431,14 +287,6 @@ VALUES ('DT000002', 'UID000012', N'Bệnh truyền nhiễm', 'LIC789012', 15);
 
 
 
-/*select * from Roles
-select * from Doctors
-select * from Patients
-select * from Users where RoleID = 'R005'
-select * from Services
-select * from Doctors
-*/
-
 
 -- Thêm dữ liệu vào bảng Patients
 INSERT INTO Patients (PatientID, UserID, DateOfBirth, Gender, Phone, BloodType, Allergy) 
@@ -502,23 +350,14 @@ VALUES ('SCH000005', 'DT000002', 'SL000005', N'Thứ tư', N'Không khả dụng
 
 
 -- Thêm dữ liệu vào bảng Books
-INSERT INTO Books (BookID, PatientID, DoctorID, ServiceID, BookDate, Status, Note) 
-VALUES ('BK000001', 'PT000001', 'DT000001', 'SV000001', '10-06-2025 08:00:00', N'Đã xác nhận', N'Khám định kỳ');
-INSERT INTO Books (BookID, PatientID, DoctorID, ServiceID, BookDate, Status, Note) 
-VALUES ('BK000002', 'PT000002', 'DT000002', 'SV000003', '12-06-2025 09:00:00', N'Đã xác nhận', N'Xét nghiệm thường niên');
-INSERT INTO Books (BookID, PatientID, DoctorID, ServiceID, BookDate, Status, Note) 
-VALUES ('BK000003', 'PT000003', 'DT000002', 'SV000004', '15-06-2025 10:00:00', N'Đang chờ', N'Tư vấn lần đầu');
+INSERT INTO Books (BookID, PatientID, DoctorID, ServiceID, BookDate, Status, LinkMeet, Note) 
+VALUES ('BK000001', 'PT000001', 'DT000001', 'SV000001', '10-06-2025 08:00:00', N'Đã xác nhận', 'https://meet.google.com/abc-defg-hij', N'Khám định kỳ');
 
--- Thêm dữ liệu vào bảng Appointment (lịch khám trực tiếp)
-INSERT INTO Appointment (AppointmentID, BookID, AppointmentDate, Status) 
-VALUES ('AP000001', 'BK000001', '2025-06-10 09:00:00', N'Đã lên lịch');
-INSERT INTO Appointment (AppointmentID, BookID, AppointmentDate, Status) 
-VALUES ('AP000002', 'BK000002', '2025-06-12 07:00:00', N'Đã lên lịch');
+INSERT INTO Books (BookID, PatientID, DoctorID, ServiceID, BookDate, Status, LinkMeet, Note) 
+VALUES ('BK000002', 'PT000002', 'DT000002', 'SV000003', '12-06-2025 09:00:00', N'Đã xác nhận', 'https://meet.google.com/klm-nopq-rst', N'Xét nghiệm thường niên');
 
--- Thêm dữ liệu vào bảng Consultation (lịch tư vấn online)
-INSERT INTO Consultation (ConsultationID, BookID, Diagnosis, LinkMeet, ConsultationDate) 
-VALUES ('CN000001', 'BK000003', NULL, 'https://meet.google.com/abc-defg-hij', '15-06-2025 10:00:00');
-
+INSERT INTO Books (BookID, PatientID, DoctorID, ServiceID, BookDate, Status, LinkMeet, Note) 
+VALUES ('BK000003', 'PT000003', 'DT000002', 'SV000004', '15-06-2025 10:00:00', N'Đang chờ', 'https://meet.google.com/uvw-xyza-bcd', N'Tư vấn lần đầu');
 -- Thêm dữ liệu vào bảng MedicalRecord
 INSERT INTO MedicalRecord (MedicalRecordID, PatientID, DoctorID, Diagnosis, CreatedDate, TreatmentResult) 
 VALUES ('MR000001', 'PT000001', 'DT000001', N'Tình trạng sức khỏe ổn định', '10-05-2025 09:15:00', N'Tiếp tục theo dõi');
@@ -548,57 +387,13 @@ INSERT INTO HIVTest (TestResultID, MedicalRecordID, TestDate, CD4Count, ViralLoa
 VALUES ('HT000001', 'MR000002', '15-05-2025', 450, 10000, N'Xét nghiệm trước khi bắt đầu điều trị');
 
 -- Thêm dữ liệu vào bảng Reminder
-INSERT INTO Reminder (ReminderCheckID, PatientID, AppointmentID, ReminderTime, Message) 
-VALUES ('REC000001', 'PT000001', 'AP000001', '09-06-2025 09:09:00', N'Nhắc nhở: Lịch khám ngày mai lúc 07:00');
-INSERT INTO Reminder (ReminderCheckID, PatientID, AppointmentID, ReminderTime, Message) 
-VALUES ('REC000002', 'PT000002', 'AP000002', '15-08-2025 10:15:00', N'Nhắc nhở: Lịch xét nghiệm CD4 ngày mai lúc 09:00');
+INSERT INTO Reminder (ReminderCheckID, PatientID, BookID, ReminderTime, Message) 
+VALUES ('REC000001', 'PT000001', 'BK000001', '09-06-2025 09:09:00', N'Nhắc nhở: Lịch khám ngày mai lúc 07:00');
+INSERT INTO Reminder (ReminderCheckID, PatientID, BookID, ReminderTime, Message) 
+VALUES ('REC000002', 'PT000002', 'BK000002', '15-08-2025 10:15:00', N'Nhắc nhở: Lịch xét nghiệm CD4 ngày mai lúc 09:00');
 
 -- Thêm dữ liệu vào bảng ReminderMedication
 INSERT INTO ReminderMedication (ReminderMedicationID, PatientID, PrescriptionID, DosageTime, Instruction, MedicationInUse) 
 VALUES ('REM000001', 'PT000002', 'PR000001', '08:00', N'Uống sau bữa sáng', N'Tenofovir đang sử dụng');
 INSERT INTO ReminderMedication (ReminderMedicationID, PatientID, PrescriptionID, DosageTime, Instruction, MedicationInUse) 
 VALUES ('REM000002', 'PT000002', 'PR000002', '08:00', N'Uống sau bữa sáng', N'Lamivudine đang sử dụng');
-
-
-
-/*
-select * from DoctorServices
-select * from DoctorWorkSchedule
-select * from ARVRegimen
-
--- Xác nhận số lượng dữ liệu đã thêm vào mỗi bảng
-SELECT 'Roles' AS TableName, COUNT(*) AS RecordCount FROM Roles
-UNION ALL
-SELECT 'Users', COUNT(*) FROM Users
-UNION ALL
-SELECT 'Patients', COUNT(*) FROM Patients
-UNION ALL
-SELECT 'Doctors', COUNT(*) FROM Doctors
-UNION ALL
-SELECT 'Services', COUNT(*) FROM Services
-UNION ALL
-SELECT 'DoctorServices', COUNT(*) FROM DoctorServices
-UNION ALL
-SELECT 'Slot', COUNT(*) FROM Slot
-UNION ALL
-SELECT 'DoctorWorkSchedule', COUNT(*) FROM DoctorWorkSchedule
-UNION ALL
-SELECT 'Books', COUNT(*) FROM Books
-UNION ALL
-SELECT 'Appointment', COUNT(*) FROM Appointment
-UNION ALL
-SELECT 'Consultation', COUNT(*) FROM Consultation
-UNION ALL
-SELECT 'MedicalRecord', COUNT(*) FROM MedicalRecord
-UNION ALL
-SELECT 'Medication', COUNT(*) FROM Medication
-UNION ALL
-SELECT 'Prescription', COUNT(*) FROM Prescription
-UNION ALL
-SELECT 'ARVRegimen', COUNT(*) FROM ARVRegimen
-UNION ALL
-SELECT 'HIVTest', COUNT(*) FROM HIVTest
-UNION ALL
-SELECT 'Reminder', COUNT(*) FROM Reminder
-UNION ALL
-SELECT 'ReminderMedication', COUNT(*) FROM ReminderMedication;*/

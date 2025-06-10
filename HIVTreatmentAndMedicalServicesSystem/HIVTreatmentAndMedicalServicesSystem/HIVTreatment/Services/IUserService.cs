@@ -1,4 +1,5 @@
 ﻿using HIVTreatment.Models;
+using HIVTreatment.DTOs;
 
 namespace HIVTreatment.Services
 {
@@ -6,5 +7,6 @@ namespace HIVTreatment.Services
     {
         User Login(String email, String password);
         User Register(User user);
+        void UpdateProfile(EditProfileUserDTO dto);
     }
 }

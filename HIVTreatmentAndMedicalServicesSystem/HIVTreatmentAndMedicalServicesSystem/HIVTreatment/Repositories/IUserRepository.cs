@@ -8,5 +8,6 @@ namespace HIVTreatment.Repositories
         User GetLastUser();
         void Add(User user);
         bool EmailExists(string email);
+        void Update(User user);
     }
 }
