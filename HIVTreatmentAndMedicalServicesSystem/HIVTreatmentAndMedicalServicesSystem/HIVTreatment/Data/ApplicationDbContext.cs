@@ -1,5 +1,4 @@
 ﻿using HIVTreatment.Models;
-using HIVTreatment.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace HIVTreatment.Data
@@ -12,6 +11,7 @@ namespace HIVTreatment.Data
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Patient> Patients { get; set; }
 
 
     }

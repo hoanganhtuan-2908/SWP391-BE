@@ -33,9 +33,17 @@ namespace HIVTreatment.Repositories
             return _context.Users.Any(u => u.Email == email);
         }
 
+        
+
+        public User GetByUserId(string UserId)
+        {
+            return _context.Users.FirstOrDefault(u => u.UserId == UserId);
+        }
+
         public void Update(User user)
         {
-            throw new NotImplementedException();
+            _context.Users.Update(user);
+            _context.SaveChanges();
         }
     }
 }

@@ -1,10 +1,9 @@
-﻿namespace HIVTreatment.DTOs
+﻿namespace HIVTreatment.Models
 {
-    public class EditProfileUserDTO
+    public class Patient
     {
-        public string UserId { get; set; }
-        public string Fullname { get; set; }
-
+        public string PatientID { get; set; }
+        public string UserID { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string Gender { get; set; }
         public string Phone { get; set; }

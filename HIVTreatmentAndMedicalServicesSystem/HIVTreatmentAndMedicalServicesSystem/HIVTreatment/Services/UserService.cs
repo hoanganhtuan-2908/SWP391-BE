@@ -1,4 +1,5 @@
-﻿using HIVTreatment.Models;
+﻿using HIVTreatment.DTOs;
+using HIVTreatment.Models;
 using HIVTreatment.Repositories;
 
 namespace HIVTreatment.Services
@@ -44,5 +45,9 @@ namespace HIVTreatment.Services
             return user;
         }
 
+        public void UpdateProfile(EditProfileUserDTO dto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
