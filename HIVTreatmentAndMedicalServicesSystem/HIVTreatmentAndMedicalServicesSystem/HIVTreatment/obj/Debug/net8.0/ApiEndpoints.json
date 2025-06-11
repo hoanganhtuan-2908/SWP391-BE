@@ -16,6 +16,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HIVTreatment.Controllers.ProfileUserController",
+    "Method": "Update",
+    "RelativePath": "api/ProfileUser/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "editProfileUserDTO",
+        "Type": "HIVTreatment.DTOs.EditProfileUserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HIVTreatment.Controllers.RegisterController",
     "Method": "Register",
     "RelativePath": "api/Register/register",
