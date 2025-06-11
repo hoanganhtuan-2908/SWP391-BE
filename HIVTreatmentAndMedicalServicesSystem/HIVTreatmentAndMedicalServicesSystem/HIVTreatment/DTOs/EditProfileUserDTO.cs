@@ -1,0 +1,15 @@
+﻿namespace HIVTreatment.DTOs
+{
+    public class EditProfileUserDTO
+    {
+        public string UserId { get; set; }
+        public string Fullname { get; set; }
+        public string Email { get; set; }
+
+        public DateTime DayOfBirth {  get; set; }
+        public string Gender { get; set; }
+        public string Phone { get; set; }
+        public string BloodType { get; set; }
+        public string Allergy { get; set; }
+    }
+}
