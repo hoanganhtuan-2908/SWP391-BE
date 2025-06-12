@@ -45,9 +45,6 @@ namespace HIVTreatment.Services
             return user;
         }
 
-        public void UpdateProfile(EditProfileUserDTO dto)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

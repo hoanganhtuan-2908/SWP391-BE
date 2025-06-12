@@ -7,6 +7,6 @@ namespace HIVTreatment.Services
     {
         User Login(String email, String password);
         User Register(User user);
-        void UpdateProfile(EditProfileUserDTO dto);
+        
     }
 }

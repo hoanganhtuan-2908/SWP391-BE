@@ -152,10 +152,6 @@
       "RegisterDTO": {
         "type": "object",
         "properties": {
-          "roleId": {
-            "type": "string",
-            "nullable": true
-          },
           "fullname": {
             "type": "string",
             "nullable": true

@@ -3,64 +3,27 @@
   "WorkspaceRootPath": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\services\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\services\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\controllers\\editprofileusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\controllers\\editprofileusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LE QUOC VIET\\AppData\\Local\\Temp\\jdcrd25p..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\repositories\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\repositories\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\services\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\services\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\services\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\services\\profileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\dtos\\editprofileuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\dtos\\editprofileuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,12 +34,62 @@
       "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\dtos\\editprofileuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\dtos\\editprofileuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\controllers\\editprofileusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\controllers\\editprofileusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\repositories\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\repositories\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\services\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\services\\iprofileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\hivtreatment.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\hivtreatment.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|d:\\swp391\\swp391-backend\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\hivtreatment.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\hivtreatment.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LE QUOC VIET\\AppData\\Local\\Temp\\jdcrd25p..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LE QUOC VIET\\AppData\\Local\\Temp\\jdcrd25p..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,11 +99,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "HIVTreatment.http",
               "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\HIVTreatment.http",
               "RelativeDocumentMoniker": "HIVTreatment\\HIVTreatment.http",
@@ -99,56 +112,83 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
               "WhenOpened": "2025-06-06T02:24:19.697Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProfileService.cs",
-              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\ProfileService.cs",
-              "RelativeDocumentMoniker": "HIVTreatment\\Services\\ProfileService.cs",
-              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\ProfileService.cs",
-              "RelativeToolTip": "HIVTreatment\\Services\\ProfileService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T14:08:25.946Z"
+              "Title": "SQLQuery1.sql ",
+              "DocumentMoniker": "C:\\Users\\LE QUOC VIET\\AppData\\Local\\Temp\\jdcrd25p..sql",
+              "ToolTip": "SQLQuery1.sql *",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-06-12T14:48:18.741Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "RegisterController.cs",
+              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Controllers\\RegisterController.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Controllers\\RegisterController.cs",
+              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Controllers\\RegisterController.cs*",
+              "RelativeToolTip": "HIVTreatment\\Controllers\\RegisterController.cs*",
+              "ViewState": "AgIAADwAAAAAAAAAAAAYwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T14:42:21.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterDTO.cs",
+              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\RegisterDTO.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\DTOs\\RegisterDTO.cs",
+              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\RegisterDTO.cs",
+              "RelativeToolTip": "HIVTreatment\\DTOs\\RegisterDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T08:45:52.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "HIVTreatment\\Services\\UserService.cs",
               "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\UserService.cs",
               "RelativeToolTip": "HIVTreatment\\Services\\UserService.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwCoAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwAYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T14:15:09.947Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Program.cs",
-              "RelativeDocumentMoniker": "HIVTreatment\\Program.cs",
-              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Program.cs",
-              "RelativeToolTip": "HIVTreatment\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T04:04:39.171Z",
+              "WhenOpened": "2025-06-09T14:15:09.947Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PatientRepository.cs",
-              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\PatientRepository.cs",
-              "RelativeDocumentMoniker": "HIVTreatment\\Repositories\\PatientRepository.cs",
-              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\PatientRepository.cs",
-              "RelativeToolTip": "HIVTreatment\\Repositories\\PatientRepository.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAwBgAAAAqAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ProfileService.cs",
+              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\ProfileService.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Services\\ProfileService.cs",
+              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\ProfileService.cs",
+              "RelativeToolTip": "HIVTreatment\\Services\\ProfileService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAYwC0AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T13:47:44.611Z"
+              "WhenOpened": "2025-06-11T14:08:25.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Models\\Patient.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Models\\Patient.cs",
+              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Models\\Patient.cs",
+              "RelativeToolTip": "HIVTreatment\\Models\\Patient.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T13:32:57.343Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -158,81 +198,62 @@
               "RelativeDocumentMoniker": "HIVTreatment\\Repositories\\UserRepository.cs",
               "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\UserRepository.cs",
               "RelativeToolTip": "HIVTreatment\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAwCoAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T14:13:47.538Z"
+              "WhenOpened": "2025-06-09T14:13:47.538Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EditProfileUserController.cs",
-              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Controllers\\EditProfileUserController.cs",
-              "RelativeDocumentMoniker": "HIVTreatment\\Controllers\\EditProfileUserController.cs",
-              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Controllers\\EditProfileUserController.cs",
-              "RelativeToolTip": "HIVTreatment\\Controllers\\EditProfileUserController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAuwBkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T14:37:58.562Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "HIVTreatment\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "HIVTreatment\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-07T03:16:17.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IPatientRepository.cs",
-              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\IPatientRepository.cs",
-              "RelativeDocumentMoniker": "HIVTreatment\\Repositories\\IPatientRepository.cs",
-              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\IPatientRepository.cs",
-              "RelativeToolTip": "HIVTreatment\\Repositories\\IPatientRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T13:43:58.432Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "HIVTreatment\\Repositories\\IUserRepository.cs",
-              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\IUserRepository.cs",
-              "RelativeToolTip": "HIVTreatment\\Repositories\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T14:07:13.363Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "LoginController.cs",
               "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "HIVTreatment\\Controllers\\LoginController.cs",
               "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Controllers\\LoginController.cs",
               "RelativeToolTip": "HIVTreatment\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwCEAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T13:55:27.029Z"
+              "WhenOpened": "2025-06-09T13:55:27.029Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IProfileService.cs",
-              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\IProfileService.cs",
-              "RelativeDocumentMoniker": "HIVTreatment\\Services\\IProfileService.cs",
-              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\IProfileService.cs",
-              "RelativeToolTip": "HIVTreatment\\Services\\IProfileService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABCAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Models\\User.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Models\\User.cs",
+              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Models\\User.cs",
+              "RelativeToolTip": "HIVTreatment\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T14:07:12.782Z"
+              "WhenOpened": "2025-06-09T14:34:10.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EditProfileUserDTO.cs",
+              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\EditProfileUserDTO.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\DTOs\\EditProfileUserDTO.cs",
+              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\EditProfileUserDTO.cs",
+              "RelativeToolTip": "HIVTreatment\\DTOs\\EditProfileUserDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T09:06:15.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\DTOs\\LoginDTO.cs",
+              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\LoginDTO.cs",
+              "RelativeToolTip": "HIVTreatment\\DTOs\\LoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T08:57:01.011Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -242,73 +263,105 @@
               "RelativeDocumentMoniker": "HIVTreatment\\Services\\IUserService.cs",
               "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\IUserService.cs",
               "RelativeToolTip": "HIVTreatment\\Services\\IUserService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T14:27:20.729Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Patient.cs",
-              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Models\\Patient.cs",
-              "RelativeDocumentMoniker": "HIVTreatment\\Models\\Patient.cs",
-              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Models\\Patient.cs",
-              "RelativeToolTip": "HIVTreatment\\Models\\Patient.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T13:32:57.343Z"
+              "WhenOpened": "2025-06-09T14:27:20.729Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "EditProfileUserDTO.cs",
-              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\EditProfileUserDTO.cs",
-              "RelativeDocumentMoniker": "HIVTreatment\\DTOs\\EditProfileUserDTO.cs",
-              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\EditProfileUserDTO.cs",
-              "RelativeToolTip": "HIVTreatment\\DTOs\\EditProfileUserDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Title": "IPatientRepository.cs",
+              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\IPatientRepository.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Repositories\\IPatientRepository.cs",
+              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\IPatientRepository.cs",
+              "RelativeToolTip": "HIVTreatment\\Repositories\\IPatientRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T09:06:15.783Z"
+              "WhenOpened": "2025-06-11T13:43:58.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EditProfileUserController.cs",
+              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Controllers\\EditProfileUserController.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Controllers\\EditProfileUserController.cs",
+              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Controllers\\EditProfileUserController.cs",
+              "RelativeToolTip": "HIVTreatment\\Controllers\\EditProfileUserController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T14:37:58.562Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "LoginDTO.cs",
-              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\LoginDTO.cs",
-              "RelativeDocumentMoniker": "HIVTreatment\\DTOs\\LoginDTO.cs",
-              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\LoginDTO.cs",
-              "RelativeToolTip": "HIVTreatment\\DTOs\\LoginDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Title": "PatientRepository.cs",
+              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\PatientRepository.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Repositories\\PatientRepository.cs",
+              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\PatientRepository.cs",
+              "RelativeToolTip": "HIVTreatment\\Repositories\\PatientRepository.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAYwBgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T08:57:01.011Z"
+              "WhenOpened": "2025-06-11T13:47:44.611Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "RegisterDTO.cs",
-              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\RegisterDTO.cs",
-              "RelativeDocumentMoniker": "HIVTreatment\\DTOs\\RegisterDTO.cs",
-              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\RegisterDTO.cs",
-              "RelativeToolTip": "HIVTreatment\\DTOs\\RegisterDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Program.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Program.cs",
+              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Program.cs",
+              "RelativeToolTip": "HIVTreatment\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACYAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T08:45:52.856Z"
+              "WhenOpened": "2025-06-07T04:04:39.171Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Models\\User.cs",
-              "RelativeDocumentMoniker": "HIVTreatment\\Models\\User.cs",
-              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Models\\User.cs",
-              "RelativeToolTip": "HIVTreatment\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "HIVTreatment\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T14:34:10.896Z"
+              "WhenOpened": "2025-06-07T03:16:17.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Repositories\\IUserRepository.cs",
+              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\IUserRepository.cs",
+              "RelativeToolTip": "HIVTreatment\\Repositories\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T14:07:13.363Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
+              "Title": "IProfileService.cs",
+              "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\IProfileService.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Services\\IProfileService.cs",
+              "ToolTip": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\IProfileService.cs",
+              "RelativeToolTip": "HIVTreatment\\Services\\IProfileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T14:07:12.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "HIVTreatment.csproj",
               "DocumentMoniker": "D:\\SWP391\\SWP391-BackEnd\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\HIVTreatment.csproj",
               "RelativeDocumentMoniker": "HIVTreatment\\HIVTreatment.csproj",
