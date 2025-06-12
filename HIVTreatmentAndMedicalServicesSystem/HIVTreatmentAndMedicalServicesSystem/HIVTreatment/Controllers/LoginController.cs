@@ -1,5 +1,4 @@
-﻿using Azure.Core;
-using HIVTreatment.DTOs;
+﻿using HIVTreatment.DTOs;
 using HIVTreatment.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -34,13 +33,40 @@ namespace HIVTreatment.Controllers
                     return Unauthorized("Sai email hoặc mật khẩu");
                 }
 
-                return Ok(user);
+                // Store user ID in session
+                HttpContext.Session.SetString("UserId", user.UserId);
+                
+                return Ok(new { 
+                    user = user,
+                    message = "Đăng nhập thành công"
+                });
             }
             catch (Exception ex)
             {
                 // Log the exception here
                 return StatusCode(500, "Đã xảy ra lỗi trong quá trình đăng nhập. Vui lòng thử lại sau.");
             }
+        }
+        
+        // Add an endpoint to check if user is logged in
+        [HttpGet("check-session")]
+        public IActionResult CheckSession()
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized("Not logged in");
+            }
+            
+            return Ok(new { userId = userId });
+        }
+        
+        // Add logout endpoint
+        [HttpPost("logout")]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return Ok("Đăng xuất thành công");
         }
     }
 }
