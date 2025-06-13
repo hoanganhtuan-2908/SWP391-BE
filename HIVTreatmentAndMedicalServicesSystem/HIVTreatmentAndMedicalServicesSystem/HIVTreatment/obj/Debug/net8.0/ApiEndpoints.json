@@ -17,6 +17,16 @@
   },
   {
     "ContainingType": "HIVTreatment.Controllers.LoginController",
+    "Method": "CheckSession",
+    "RelativePath": "api/Login/check-session",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HIVTreatment.Controllers.LoginController",
     "Method": "Login",
     "RelativePath": "api/Login/login",
     "HttpMethod": "POST",
@@ -29,6 +39,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HIVTreatment.Controllers.LoginController",
+    "Method": "Logout",
+    "RelativePath": "api/Login/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
