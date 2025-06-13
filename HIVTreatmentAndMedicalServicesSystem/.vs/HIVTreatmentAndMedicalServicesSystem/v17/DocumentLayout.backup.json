@@ -1,0 +1,317 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\controllers\\staffappointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\controllers\\staffappointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\services\\appointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\repositories\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\repositories\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\repositories\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\repositories\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\dtos\\bookappointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\dtos\\bookappointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\models\\booksappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\models\\booksappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\services\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\services\\iappointmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|c:\\users\\hoang anh tuan\\onedrive\\m\u00E1y t\u00EDnh\\swp391-backend\\swp391-be\\hivtreatmentandmedicalservicessystem\\hivtreatmentandmedicalservicessystem\\hivtreatment\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15FAFBB3-99E7-4995-AB8F-C9221F01E914}|HIVTreatment\\HIVTreatment.csproj|solutionrelative:hivtreatment\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\UserService.cs",
+              "RelativeToolTip": "HIVTreatment\\Services\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T06:28:11.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Services\\IUserService.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\IUserService.cs",
+              "RelativeToolTip": "HIVTreatment\\Services\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T06:28:10.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "HIVTreatment\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T06:28:03.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Repositories\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\IUserRepository.cs",
+              "RelativeToolTip": "HIVTreatment\\Repositories\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T06:28:02.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegisterDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\RegisterDTO.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\DTOs\\RegisterDTO.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\RegisterDTO.cs",
+              "RelativeToolTip": "HIVTreatment\\DTOs\\RegisterDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T06:27:59.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\DTOs\\LoginDTO.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\LoginDTO.cs",
+              "RelativeToolTip": "HIVTreatment\\DTOs\\LoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T06:27:57.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "HIVTreatment\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T06:27:55.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "StaffAppointmentController.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Controllers\\StaffAppointmentController.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Controllers\\StaffAppointmentController.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Controllers\\StaffAppointmentController.cs",
+              "RelativeToolTip": "HIVTreatment\\Controllers\\StaffAppointmentController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBsAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T06:37:20.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "HIVTreatment\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T06:32:35.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "HIVTreatment\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T15:05:13.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppointmentController.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Controllers\\AppointmentController.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Controllers\\AppointmentController.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Controllers\\AppointmentController.cs",
+              "RelativeToolTip": "HIVTreatment\\Controllers\\AppointmentController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAwEEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T13:50:11.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppointmentService.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\AppointmentService.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Services\\AppointmentService.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\AppointmentService.cs",
+              "RelativeToolTip": "HIVTreatment\\Services\\AppointmentService.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAIwFcAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T08:36:17.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IAppointmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\IAppointmentRepository.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Repositories\\IAppointmentRepository.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\IAppointmentRepository.cs",
+              "RelativeToolTip": "HIVTreatment\\Repositories\\IAppointmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T14:23:17.587Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppointmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\AppointmentRepository.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Repositories\\AppointmentRepository.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Repositories\\AppointmentRepository.cs",
+              "RelativeToolTip": "HIVTreatment\\Repositories\\AppointmentRepository.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAkwB4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T14:27:05.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BookAppointmentDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\BookAppointmentDTO.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\DTOs\\BookAppointmentDTO.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\DTOs\\BookAppointmentDTO.cs",
+              "RelativeToolTip": "HIVTreatment\\DTOs\\BookAppointmentDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T14:20:32.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BooksAppointment.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Models\\BooksAppointment.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Models\\BooksAppointment.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Models\\BooksAppointment.cs",
+              "RelativeToolTip": "HIVTreatment\\Models\\BooksAppointment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T14:15:21.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IAppointmentService.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\IAppointmentService.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Services\\IAppointmentService.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Services\\IAppointmentService.cs",
+              "RelativeToolTip": "HIVTreatment\\Services\\IAppointmentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwBEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T13:50:25.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Models\\User.cs",
+              "RelativeDocumentMoniker": "HIVTreatment\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\HOANG ANH TUAN\\OneDrive\\M\u00E1y t\u00EDnh\\SWP391-BackEnd\\SWP391-BE\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatmentAndMedicalServicesSystem\\HIVTreatment\\Models\\User.cs",
+              "RelativeToolTip": "HIVTreatment\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T14:15:45.737Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
