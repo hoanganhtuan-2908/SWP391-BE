@@ -1,5 +1,47 @@
 [
   {
+    "ContainingType": "HIVTreatment.Controllers.AppointmentController",
+    "Method": "GetAll",
+    "RelativePath": "api/Appointment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HIVTreatment.Controllers.AppointmentController",
+    "Method": "Create",
+    "RelativePath": "api/Appointment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "BookAppointmentDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HIVTreatment.Controllers.AppointmentController",
+    "Method": "GetById",
+    "RelativePath": "api/Appointment/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "HIVTreatment.Controllers.EditProfileUserController",
     "Method": "AdminOnlyEndpoint",
     "RelativePath": "api/EditProfileUser/admin-only",
@@ -37,34 +79,8 @@
   },
   {
     "ContainingType": "HIVTreatment.Controllers.LoginController",
-    "Method": "CheckSession",
-    "RelativePath": "api/Login/check-session",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "HIVTreatment.Controllers.LoginController",
     "Method": "Login",
     "RelativePath": "api/Login/login",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "loginDTO",
-        "Type": "HIVTreatment.DTOs.LoginDTO",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "HIVTreatment.Controllers.LoginController",
-    "Method": "Login1",
-    "RelativePath": "api/Login/login1",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -98,6 +114,53 @@
       {
         "Name": "registerDTO",
         "Type": "HIVTreatment.DTOs.RegisterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HIVTreatment.Controllers.StaffAppointmentController",
+    "Method": "ApproveAppointment",
+    "RelativePath": "api/staff/appointments/approve/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HIVTreatment.Controllers.StaffAppointmentController",
+    "Method": "GetPendingAppointments",
+    "RelativePath": "api/staff/appointments/pending",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HIVTreatment.Controllers.StaffAppointmentController",
+    "Method": "RejectAppointment",
+    "RelativePath": "api/staff/appointments/reject/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "HIVTreatment.Controllers.RejectDto",
         "IsRequired": true
       }
     ],

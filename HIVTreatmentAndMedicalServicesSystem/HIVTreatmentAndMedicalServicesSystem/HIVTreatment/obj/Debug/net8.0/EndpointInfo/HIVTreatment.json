@@ -5,6 +5,69 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/Appointment": {
+      "get": {
+        "tags": [
+          "Appointment"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Appointment"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookAppointmentDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookAppointmentDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/BookAppointmentDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Appointment/{id}": {
+      "get": {
+        "tags": [
+          "Appointment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/EditProfileUser/edit-profile": {
       "put": {
         "tags": [
@@ -52,49 +115,6 @@
       "get": {
         "tags": [
           "EditProfileUser"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Login/login1": {
-      "post": {
-        "tags": [
-          "Login"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoginDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoginDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/LoginDTO"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Login/check-session": {
-      "get": {
-        "tags": [
-          "Login"
         ],
         "responses": {
           "200": {
@@ -176,38 +196,135 @@
           }
         }
       }
+    },
+    "/api/staff/appointments/pending": {
+      "get": {
+        "tags": [
+          "StaffAppointment"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/staff/appointments/approve/{id}": {
+      "put": {
+        "tags": [
+          "StaffAppointment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/staff/appointments/reject/{id}": {
+      "put": {
+        "tags": [
+          "StaffAppointment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
-      "EditProfileUserDTO": {
+      "BookAppointmentDTO": {
         "type": "object",
         "properties": {
-          "userId": {
+          "DoctorID": {
             "type": "string",
             "nullable": true
           },
-          "fullname": {
+          "ServiceID": {
             "type": "string",
             "nullable": true
           },
-          "dateOfBirth": {
+          "BookDate": {
             "type": "string",
             "format": "date-time"
           },
-          "gender": {
+          "Note": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EditProfileUserDTO": {
+        "type": "object",
+        "properties": {
+          "UserId": {
             "type": "string",
             "nullable": true
           },
-          "phone": {
+          "Fullname": {
             "type": "string",
             "nullable": true
           },
-          "bloodType": {
+          "DateOfBirth": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "Gender": {
             "type": "string",
             "nullable": true
           },
-          "allergy": {
+          "Phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "BloodType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Allergy": {
             "type": "string",
             "nullable": true
           }
@@ -217,11 +334,11 @@
       "LoginDTO": {
         "type": "object",
         "properties": {
-          "email": {
+          "Email": {
             "type": "string",
             "nullable": true
           },
-          "password": {
+          "Password": {
             "type": "string",
             "nullable": true
           }
@@ -231,15 +348,25 @@
       "RegisterDTO": {
         "type": "object",
         "properties": {
-          "fullname": {
+          "Fullname": {
             "type": "string",
             "nullable": true
           },
-          "password": {
+          "Password": {
             "type": "string",
             "nullable": true
           },
-          "email": {
+          "Email": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RejectDto": {
+        "type": "object",
+        "properties": {
+          "Reason": {
             "type": "string",
             "nullable": true
           }
