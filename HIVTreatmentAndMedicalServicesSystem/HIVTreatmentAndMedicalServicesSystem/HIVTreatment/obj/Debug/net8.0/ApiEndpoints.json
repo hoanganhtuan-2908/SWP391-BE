@@ -1,6 +1,26 @@
 [
   {
     "ContainingType": "HIVTreatment.Controllers.EditProfileUserController",
+    "Method": "AdminOnlyEndpoint",
+    "RelativePath": "api/EditProfileUser/admin-only",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HIVTreatment.Controllers.EditProfileUserController",
+    "Method": "DoctorOnlyEndpoint",
+    "RelativePath": "api/EditProfileUser/doctor-only",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HIVTreatment.Controllers.EditProfileUserController",
     "Method": "EditProfile",
     "RelativePath": "api/EditProfileUser/edit-profile",
     "HttpMethod": "PUT",
@@ -29,6 +49,22 @@
     "ContainingType": "HIVTreatment.Controllers.LoginController",
     "Method": "Login",
     "RelativePath": "api/Login/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDTO",
+        "Type": "HIVTreatment.DTOs.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HIVTreatment.Controllers.LoginController",
+    "Method": "Login1",
+    "RelativePath": "api/Login/login1",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

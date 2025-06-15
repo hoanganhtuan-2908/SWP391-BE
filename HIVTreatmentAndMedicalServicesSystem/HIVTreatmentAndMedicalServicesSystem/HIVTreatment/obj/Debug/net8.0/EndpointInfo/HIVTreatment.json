@@ -36,7 +36,31 @@
         }
       }
     },
-    "/api/Login/login": {
+    "/api/EditProfileUser/admin-only": {
+      "get": {
+        "tags": [
+          "EditProfileUser"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/EditProfileUser/doctor-only": {
+      "get": {
+        "tags": [
+          "EditProfileUser"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Login/login1": {
       "post": {
         "tags": [
           "Login"
@@ -84,6 +108,37 @@
         "tags": [
           "Login"
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Login/login": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -191,6 +246,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Enter 'Bearer' [space] and then your valid token.",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

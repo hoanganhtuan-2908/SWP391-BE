@@ -1,50 +1,97 @@
 ﻿using HIVTreatment.DTOs;
 using HIVTreatment.Models;
 using HIVTreatment.Repositories;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace HIVTreatment.Services
 {
     public class UserService : IUserService
     {
-        private readonly IUserRepository iuserRepository;
-        public UserService(IUserRepository userRepository)
-        {
-            iuserRepository = userRepository;
-        }
-        
+        private readonly IUserRepository _userRepository;
+        private readonly IConfiguration _configuration;
 
-        User IUserService.Login(string email, string password)
+        public UserService(IUserRepository userRepository, IConfiguration configuration)
         {
-            var user = iuserRepository.GetByEmail(email);
-            if (user == null || user.Password != password)
+            _userRepository = userRepository;
+            _configuration = configuration;
+        }
+
+        public UserLoginResponse Login(string email, string password)
+        {
+            try
             {
-                return null;
+                var user = _userRepository.GetByEmail(email);
+                if (user == null || user.Password != password)
+                    return null;
+
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var key = Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]);
+                
+                if (key.Length < 16)
+                {
+                    throw new Exception("JWT Key must be at least 16 characters long");
+                }
+
+                var claims = new[]
+                {
+                    new Claim(ClaimTypes.NameIdentifier, user.UserId),
+                    new Claim(ClaimTypes.Email, user.Email),
+                    new Claim(ClaimTypes.Role, user.RoleId)
+                };
+
+                if (!double.TryParse(_configuration["Jwt:ExpiryInHours"], out double expiryHours))
+                {
+                    expiryHours = 3; // Default to 3 hours if parsing fails
+                }
+
+                var tokenDescriptor = new SecurityTokenDescriptor
+                {
+                    Subject = new ClaimsIdentity(claims),
+                    Expires = DateTime.UtcNow.AddHours(expiryHours),
+                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
+                    Issuer = _configuration["Jwt:Issuer"],
+                    Audience = _configuration["Jwt:Audience"]
+                };
+
+                var token = tokenHandler.CreateToken(tokenDescriptor);
+
+                return new UserLoginResponse
+                {
+                    UserId = user.UserId,
+                    RoleId = user.RoleId,
+                    Fullname = user.Fullname,
+                    Email = user.Email,
+                    Token = tokenHandler.WriteToken(token)
+                };
             }
-            return user;
+            catch (Exception ex)
+            {
+                // Log the exception here
+                Console.WriteLine($"Error creating token: {ex.Message}");
+                throw;
+            }
         }
 
         public User Register(User user)
         {
-            if(iuserRepository.EmailExists(user.Email))
-            {
-                return null; // Email already exists
-            }
-            var lastUser = iuserRepository.GetLastUser(); // Trả về user có UserId lớn nhất
-            int nextId = 1;
+            if (_userRepository.EmailExists(user.Email)) return null;
 
-            if (lastUser != null && lastUser.UserId?.Length >= 9)
+            var lastUser = _userRepository.GetLastUser();
+            int nextId = 1;
+            if (lastUser != null)
             {
-                string numberPart = lastUser.UserId.Substring(3); // lấy phần số
+                string numberPart = lastUser.UserId.Substring(3);
                 if (int.TryParse(numberPart, out int parsed))
-                {
                     nextId = parsed + 1;
-                }
             }
-            user.UserId = "UID" + nextId.ToString("D6"); // Format the new user ID
-            iuserRepository.Add(user);
+
+            user.UserId = "UID" + nextId.ToString("D6");
+            _userRepository.Add(user);
             return user;
         }
-
-        
     }
 }

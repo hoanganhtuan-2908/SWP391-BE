@@ -17,8 +17,8 @@ namespace HIVTreatment.Controllers
             _userService = userService;
         }
 
-        [HttpPost("login")]
-        public IActionResult Login([FromBody] LoginDTO loginDTO)
+        [HttpPost("login1")]
+        public IActionResult Login1([FromBody] LoginDTO loginDTO)
         {
             try
             {
@@ -68,5 +68,20 @@ namespace HIVTreatment.Controllers
             HttpContext.Session.Clear();
             return Ok("Đăng xuất thành công");
         }
+
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] LoginDTO loginDTO)
+        {
+            if (string.IsNullOrEmpty(loginDTO.Email) || string.IsNullOrEmpty(loginDTO.Password))
+                return BadRequest("Email và mật khẩu không được để trống");
+
+            var result = _userService.Login(loginDTO.Email, loginDTO.Password);
+            if (result == null)
+                return Unauthorized("Sai email hoặc mật khẩu");
+
+            return Ok(result);
+        }
+
     }
+
 }

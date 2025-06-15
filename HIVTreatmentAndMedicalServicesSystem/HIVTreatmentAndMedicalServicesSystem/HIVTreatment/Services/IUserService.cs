@@ -5,7 +5,7 @@ namespace HIVTreatment.Services
 {
     public interface IUserService
     {
-        User Login(String email, String password);
+        UserLoginResponse Login(string email, string password);
         User Register(User user);
         
     }

@@ -334,3 +334,4 @@ D:\SWP391\BE\SWP391-BE\HIVTreatmentAndMedicalServicesSystem\HIVTreatmentAndMedic
 D:\SWP391\BE\SWP391-BE\HIVTreatmentAndMedicalServicesSystem\HIVTreatmentAndMedicalServicesSystem\HIVTreatment\obj\Debug\net8.0\HIVTreatment.genruntimeconfig.cache
 D:\SWP391\BE\SWP391-BE\HIVTreatmentAndMedicalServicesSystem\HIVTreatmentAndMedicalServicesSystem\HIVTreatment\obj\Debug\net8.0\ref\HIVTreatment.dll
 D:\SWP391\SWP391-BackEnd\HIVTreatmentAndMedicalServicesSystem\HIVTreatmentAndMedicalServicesSystem\HIVTreatment\obj\Debug\net8.0\HIVTreatment.sourcelink.json
+D:\SWP391\SWP391-BackEnd\HIVTreatmentAndMedicalServicesSystem\HIVTreatmentAndMedicalServicesSystem\HIVTreatment\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

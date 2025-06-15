@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("eb55a145-3761-48f1-b137-668a175b03c9")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("HIVTreatment")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c73a464ee9185b12ff60937de0c8fb61a8c9b975")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f296e763c07c6643a5c9261bd8385ff34340278")]
 [assembly: System.Reflection.AssemblyProductAttribute("HIVTreatment")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HIVTreatment")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
