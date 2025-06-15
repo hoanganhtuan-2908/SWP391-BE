@@ -18,7 +18,7 @@ namespace HIVTreatment.Controllers
         {
             iProfileService = profileService;
         }
-        
+
         [HttpPut("edit-profile")]
         public IActionResult EditProfile([FromBody] EditProfileUserDTO editProfileUserDTO)
         {
@@ -26,16 +26,19 @@ namespace HIVTreatment.Controllers
             {
                 return BadRequest("Dữ liệu không hợp lệ");
             }
-            
-            // Verify that the user is editing their own profile or is an admin
+
+            // Lấy thông tin người dùng từ JWT
             var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var userRole = User.FindFirstValue(ClaimTypes.Role);
-            
-            if (currentUserId != editProfileUserDTO.UserId && userRole != "R001")
+
+            // Kiểm tra quyền
+            var allowedRoles = new[] { "R001", "R003" }; // Admin và Doctor
+
+            if (currentUserId != editProfileUserDTO.UserId && !allowedRoles.Contains(userRole))
             {
-                return Forbid("You can only edit your own profile");
+                return Forbid("Bạn không có quyền chỉnh sửa hồ sơ người khác");
             }
-            
+
             var result = iProfileService.UpdateProfile(editProfileUserDTO);
             if (result)
             {
@@ -46,7 +49,8 @@ namespace HIVTreatment.Controllers
                 return NotFound("Không tìm thấy người dùng để cập nhật");
             }
         }
-        
+
+
         // Example of a role-specific endpoint
         [HttpGet("admin-only")]
         [Authorize(Policy = "RequireAdminRole")]

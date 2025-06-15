@@ -5,5 +5,7 @@ namespace HIVTreatment.Services
     public interface IProfileService
     {
         bool UpdateProfile(EditProfileUserDTO editProfileUserDTO);
+
+        bool UpdateDoctorProfile(EditprofileDoctorDTO editProfileDoctorDTO);
     }
 }

@@ -8,11 +8,18 @@ namespace HIVTreatment.Services
     {
         private readonly IUserRepository iUserRepository;
         private readonly IPatientRepository iPatientRepository;
+        private readonly IDoctorRepository iDoctorRepository;
 
-        public ProfileService(IUserRepository userRepository, IPatientRepository patientRepository)
+        public ProfileService(IUserRepository userRepository, IPatientRepository patientRepository, IDoctorRepository iDoctorRepository)
         {
             iUserRepository = userRepository;
             iPatientRepository = patientRepository;
+            this.iDoctorRepository = iDoctorRepository;
+        }
+
+        public bool UpdateDoctorProfile(EditprofileDoctorDTO editProfileDoctorDTO)
+        {
+            throw new NotImplementedException();
         }
 
         public bool UpdateProfile(EditProfileUserDTO editProfileUserDTO)
