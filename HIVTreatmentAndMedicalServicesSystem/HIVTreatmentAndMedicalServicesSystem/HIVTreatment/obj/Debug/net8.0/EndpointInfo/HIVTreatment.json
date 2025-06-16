@@ -5,8 +5,11 @@
     "version": "1.0"
   },
   "paths": {
+<<<<<<< HEAD
+=======
 <<<<<<< Updated upstream
 =======
+>>>>>>> lequocviet
     "/api/Appointment": {
       "get": {
         "tags": [
@@ -180,7 +183,10 @@
         }
       }
     },
+<<<<<<< HEAD
+=======
 >>>>>>> Stashed changes
+>>>>>>> lequocviet
     "/api/Login/login": {
       "post": {
         "tags": [
@@ -212,6 +218,13 @@
         }
       }
     },
+<<<<<<< HEAD
+    "/api/Login/me": {
+      "get": {
+        "tags": [
+          "Login"
+        ],
+=======
     "/api/ProfileUser/Update": {
       "put": {
         "tags": [
@@ -236,6 +249,7 @@
             }
           }
         },
+>>>>>>> lequocviet
         "responses": {
           "200": {
             "description": "OK"
@@ -273,10 +287,88 @@
           }
         }
       }
+    },
+    "/api/staff/appointments/pending": {
+      "get": {
+        "tags": [
+          "StaffAppointment"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/staff/appointments/approve/{id}": {
+      "put": {
+        "tags": [
+          "StaffAppointment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/staff/appointments/reject/{id}": {
+      "put": {
+        "tags": [
+          "StaffAppointment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RejectDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+<<<<<<< HEAD
+      "BookAppointmentDTO": {
+=======
       "EditProfileUserDTO": {
         "type": "object",
         "properties": {
@@ -316,13 +408,96 @@
         "additionalProperties": false
       },
       "LoginDTO": {
+>>>>>>> lequocviet
         "type": "object",
         "properties": {
-          "email": {
+          "DoctorID": {
             "type": "string",
             "nullable": true
           },
-          "password": {
+          "ServiceID": {
+            "type": "string",
+            "nullable": true
+          },
+          "BookDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "Note": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EditProfileUserDTO": {
+        "type": "object",
+        "properties": {
+          "UserId": {
+            "type": "string",
+            "nullable": true
+          },
+          "Fullname": {
+            "type": "string",
+            "nullable": true
+          },
+          "DateOfBirth": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "Gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "Phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "BloodType": {
+            "type": "string",
+            "nullable": true
+          },
+          "Allergy": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EditprofileDoctorDTO": {
+        "type": "object",
+        "properties": {
+          "UserId": {
+            "type": "string",
+            "nullable": true
+          },
+          "Fullname": {
+            "type": "string",
+            "nullable": true
+          },
+          "Specialization": {
+            "type": "string",
+            "nullable": true
+          },
+          "LicenseNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExperienceYears": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginDTO": {
+        "type": "object",
+        "properties": {
+          "Email": {
+            "type": "string",
+            "nullable": true
+          },
+          "Password": {
             "type": "string",
             "nullable": true
           }
@@ -332,25 +507,44 @@
       "RegisterDTO": {
         "type": "object",
         "properties": {
-          "roleId": {
+          "Fullname": {
             "type": "string",
             "nullable": true
           },
-          "fullname": {
+          "Password": {
             "type": "string",
             "nullable": true
           },
-          "password": {
+          "Email": {
             "type": "string",
             "nullable": true
-          },
-          "email": {
+          }
+        },
+        "additionalProperties": false
+      },
+      "RejectDto": {
+        "type": "object",
+        "properties": {
+          "Reason": {
             "type": "string",
             "nullable": true
           }
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Enter 'Bearer' [space] and then your valid token.",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

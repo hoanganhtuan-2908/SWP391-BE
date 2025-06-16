@@ -1,9 +1,13 @@
-﻿using Azure.Core;
+﻿using HIVTreatment.Data;
 using HIVTreatment.DTOs;
+using HIVTreatment.Models;
 using HIVTreatment.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
+using System.Security.Claims;
 
 namespace HIVTreatment.Controllers
 {
@@ -18,29 +22,50 @@ namespace HIVTreatment.Controllers
             _userService = userService;
         }
 
+        
+        
+        // Add logout endpoint
+        [HttpPost("logout")]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return Ok("Đăng xuất thành công");
+        }
+
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginDTO loginDTO)
         {
-            try
-            {
-                if (loginDTO == null || string.IsNullOrEmpty(loginDTO.Email) || string.IsNullOrEmpty(loginDTO.Password))
-                {
-                    return BadRequest("Email và mật khẩu không được để trống");
-                }
+            if (string.IsNullOrEmpty(loginDTO.Email) || string.IsNullOrEmpty(loginDTO.Password))
+                return BadRequest("Email và mật khẩu không được để trống");
 
-                var user = _userService.Login(loginDTO.Email, loginDTO.Password);
-                if (user == null)
-                {
-                    return Unauthorized("Sai email hoặc mật khẩu");
-                }
+            var result = _userService.Login(loginDTO.Email, loginDTO.Password);
+            if (result == null)
+                return Unauthorized("Sai email hoặc mật khẩu");
 
-                return Ok(user);
-            }
-            catch (Exception ex)
-            {
-                // Log the exception here
-                return StatusCode(500, "Đã xảy ra lỗi trong quá trình đăng nhập. Vui lòng thử lại sau.");
-            }
+            return Ok(result);
         }
+
+
+        // GET: api/login/me
+        [HttpGet("me")]
+        [Authorize]
+        public IActionResult GetCurrentUser()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var role = User.FindFirstValue(ClaimTypes.Role);
+
+            if (string.IsNullOrEmpty(userId))
+                return Unauthorized("Không xác định được người dùng");
+
+            var user = _userService.GetByUserId(userId);
+            if (user == null)
+                return NotFound("Không tìm thấy người dùng");
+
+            return Ok(user);
+        }
+
+        
+
     }
+
 }

@@ -81,20 +81,37 @@ namespace HIVTreatment.Controllers
         [HttpGet]
         public IActionResult GetAllPatient()
         {
+<<<<<<< HEAD
+
+=======
+>>>>>>> lequocviet
             var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var userRole = User.FindFirstValue(ClaimTypes.Role);
             // Kiểm tra quyền
             var allowedRoles = new[] { "R001", "R003" };
+<<<<<<< HEAD
+            if (!allowedRoles.Contains(userRole)) // Chỉ cho phép Doctor chỉnh sửa hồ sơ của mình
+            {
+                return Forbid("Bạn không có quyền chỉnh sửa hồ sơ bác sĩ khác");
+=======
             if(currentUserId != null && !allowedRoles.Contains(userRole))
             {
                 return Forbid("Bạn không có quyền truy cập danh sách bệnh nhân");
+>>>>>>> lequocviet
             }
             var patients = iProfileService.GetAllPatient();
             if (patients == null || !patients.Any())
             {
+<<<<<<< HEAD
+                return NotFound("Không có bệnh nhân nào.");
+            }
+            return Ok(patients);
+
+=======
                 return NotFound("Không có bệnh nhân nào");
             }
             return Ok(patients);
+>>>>>>> lequocviet
         }
 
 

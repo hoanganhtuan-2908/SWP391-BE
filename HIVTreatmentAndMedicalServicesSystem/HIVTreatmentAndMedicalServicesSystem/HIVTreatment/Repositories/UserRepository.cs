@@ -33,15 +33,28 @@ namespace HIVTreatment.Repositories
             return _context.Users.Any(u => u.Email == email);
         }
 
+<<<<<<< HEAD
+        
+
+        public User GetByUserId(string UserId)
+        {
+            return _context.Users.FirstOrDefault(u => u.UserId == UserId);
+        }
+
+=======
         public User GetUserById(string userId)
         {
             return _context.Users.FirstOrDefault(u => u.UserId == userId);
         }
+>>>>>>> lequocviet
         public void Update(User user)
         {
             _context.Users.Update(user);
             _context.SaveChanges();
+<<<<<<< HEAD
+=======
 
+>>>>>>> lequocviet
         }
     }
 }
