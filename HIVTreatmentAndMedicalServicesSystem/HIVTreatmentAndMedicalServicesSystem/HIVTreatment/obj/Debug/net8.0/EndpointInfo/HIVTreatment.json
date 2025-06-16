@@ -5,6 +5,11 @@
     "version": "1.0"
   },
   "paths": {
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> lequocviet
     "/api/Appointment": {
       "get": {
         "tags": [
@@ -178,6 +183,10 @@
         }
       }
     },
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> lequocviet
     "/api/Login/login": {
       "post": {
         "tags": [
@@ -209,11 +218,38 @@
         }
       }
     },
+<<<<<<< HEAD
     "/api/Login/me": {
       "get": {
         "tags": [
           "Login"
         ],
+=======
+    "/api/ProfileUser/Update": {
+      "put": {
+        "tags": [
+          "ProfileUser"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditProfileUserDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditProfileUserDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditProfileUserDTO"
+              }
+            }
+          }
+        },
+>>>>>>> lequocviet
         "responses": {
           "200": {
             "description": "OK"
@@ -330,7 +366,49 @@
   },
   "components": {
     "schemas": {
+<<<<<<< HEAD
       "BookAppointmentDTO": {
+=======
+      "EditProfileUserDTO": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "fullname": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "dayOfBirth": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "gender": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "bloodType": {
+            "type": "string",
+            "nullable": true
+          },
+          "allergy": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginDTO": {
+>>>>>>> lequocviet
         "type": "object",
         "properties": {
           "DoctorID": {

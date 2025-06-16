@@ -1,5 +1,10 @@
 [
   {
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> lequocviet
     "ContainingType": "HIVTreatment.Controllers.AppointmentController",
     "Method": "GetAll",
     "RelativePath": "api/Appointment",
@@ -104,6 +109,10 @@
     "ReturnTypes": []
   },
   {
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> lequocviet
     "ContainingType": "HIVTreatment.Controllers.LoginController",
     "Method": "Login",
     "RelativePath": "api/Login/login",
@@ -120,6 +129,7 @@
     "ReturnTypes": []
   },
   {
+<<<<<<< HEAD
     "ContainingType": "HIVTreatment.Controllers.LoginController",
     "Method": "Logout",
     "RelativePath": "api/Login/logout",
@@ -137,6 +147,21 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+=======
+    "ContainingType": "HIVTreatment.Controllers.ProfileUserController",
+    "Method": "Update",
+    "RelativePath": "api/ProfileUser/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "editProfileUserDTO",
+        "Type": "HIVTreatment.DTOs.EditProfileUserDTO",
+        "IsRequired": true
+      }
+    ],
+>>>>>>> lequocviet
     "ReturnTypes": []
   },
   {

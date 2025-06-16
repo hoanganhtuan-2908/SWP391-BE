@@ -11,6 +11,18 @@ using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Thêm CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend",
+        policy =>
+        {
+            policy.WithOrigins("https://localhost:3001") // domain FE của bạn
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
+
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -104,6 +116,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
+<<<<<<< HEAD
 builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
 builder.Services.AddScoped<IProfileService, ProfileService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
@@ -117,6 +130,9 @@ builder.Services.AddControllers()
         // Add date format handling
     });
 
+=======
+builder.Services.AddScoped<IProfileService, ProfileService>();
+>>>>>>> lequocviet
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
