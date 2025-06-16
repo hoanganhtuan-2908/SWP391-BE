@@ -7,5 +7,6 @@ namespace HIVTreatment.Services
         bool UpdateProfile(EditProfileUserDTO editProfileUserDTO);
 
         bool UpdateDoctorProfile(EditprofileDoctorDTO editProfileDoctorDTO);
+        List<EditProfileUserDTO> GetAllPatient();
     }
 }

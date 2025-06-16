@@ -17,9 +17,54 @@ namespace HIVTreatment.Services
             this.iDoctorRepository = iDoctorRepository;
         }
 
+        public List<EditProfileUserDTO> GetAllPatient()
+        {
+            return iPatientRepository.GetAllPatient();
+            }
+
         public bool UpdateDoctorProfile(EditprofileDoctorDTO editProfileDoctorDTO)
         {
-            throw new NotImplementedException();
+            var user = iUserRepository.GetByUserId(editProfileDoctorDTO.UserId);
+            if (user == null)
+            {
+                return false; // User not found
+            }
+            var doctor = iDoctorRepository.GetByDoctorId(editProfileDoctorDTO.UserId);
+            user.Fullname = editProfileDoctorDTO.Fullname;
+            iUserRepository.Update(user);
+            if (doctor == null)
+            {
+                var lastDoctor = iDoctorRepository.GetLastDoctorId();
+                int nextId = 1;
+                if (lastDoctor != null && lastDoctor.DoctorId?.Length >= 8)
+                {
+                    string numberPart = lastDoctor.DoctorId.Substring(2);
+                    if (int.TryParse(numberPart, out int parsed))
+                    {
+                        nextId = parsed + 1;
+                    }
+                }
+                string newDoctorID = "DT" + nextId.ToString("D6");
+                doctor = new Doctor
+                {
+                    DoctorId = newDoctorID,
+                    UserId = editProfileDoctorDTO.UserId,
+                    Specialization = editProfileDoctorDTO.Specialization,
+                    LicenseNumber = editProfileDoctorDTO.LicenseNumber,
+                    ExperienceYears = editProfileDoctorDTO.ExperienceYears,
+                };
+                // Use Add instead of Update for new entities
+                iDoctorRepository.Add(doctor);
+            }
+            else
+            {
+                // Update existing doctor data
+                doctor.Specialization = editProfileDoctorDTO.Specialization;
+                doctor.LicenseNumber = editProfileDoctorDTO.LicenseNumber;
+                doctor.ExperienceYears = editProfileDoctorDTO.ExperienceYears;
+                iDoctorRepository.Update(doctor);
+            }
+            return true;
         }
 
         public bool UpdateProfile(EditProfileUserDTO editProfileUserDTO)

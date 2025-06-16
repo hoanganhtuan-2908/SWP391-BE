@@ -99,6 +99,37 @@
         }
       }
     },
+    "/api/EditProfileUser/edit-doctor-profile": {
+      "put": {
+        "tags": [
+          "EditProfileUser"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditprofileDoctorDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditprofileDoctorDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EditprofileDoctorDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/EditProfileUser/admin-only": {
       "get": {
         "tags": [
@@ -159,6 +190,18 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Login/me": {
+      "get": {
+        "tags": [
+          "Login"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -327,6 +370,32 @@
           "Allergy": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EditprofileDoctorDTO": {
+        "type": "object",
+        "properties": {
+          "UserId": {
+            "type": "string",
+            "nullable": true
+          },
+          "Fullname": {
+            "type": "string",
+            "nullable": true
+          },
+          "Specialization": {
+            "type": "string",
+            "nullable": true
+          },
+          "LicenseNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "ExperienceYears": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

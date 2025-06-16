@@ -1,4 +1,5 @@
-﻿using HIVTreatment.DTOs;
+﻿using HIVTreatment.Data;
+using HIVTreatment.DTOs;
 using HIVTreatment.Models;
 using HIVTreatment.Repositories;
 using Microsoft.Extensions.Configuration;
@@ -13,12 +14,21 @@ namespace HIVTreatment.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly IConfiguration _configuration;
+        
 
         public UserService(IUserRepository userRepository, IConfiguration configuration)
         {
             _userRepository = userRepository;
             _configuration = configuration;
         }
+
+        
+
+        public User GetByUserId(string userId)
+        {
+            return _userRepository.GetByUserId(userId);
+        }
+
 
         public UserLoginResponse Login(string email, string password)
         {

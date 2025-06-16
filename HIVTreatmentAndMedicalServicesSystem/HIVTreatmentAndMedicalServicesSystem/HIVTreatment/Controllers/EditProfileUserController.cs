@@ -1,4 +1,5 @@
 ﻿using HIVTreatment.DTOs;
+using HIVTreatment.Models;
 using HIVTreatment.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -48,6 +49,40 @@ namespace HIVTreatment.Controllers
             {
                 return NotFound("Không tìm thấy người dùng để cập nhật");
             }
+        }
+
+        [HttpPut("edit-doctor-profile")]
+        public IActionResult EditDoctorProfile([FromBody] EditprofileDoctorDTO editProfileDoctorDTO)
+        {
+            if (editProfileDoctorDTO == null)
+            {
+                return BadRequest("Dữ liệu không hợp lệ");
+            }
+            // Lấy thông tin người dùng từ JWT
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var userRole = User.FindFirstValue(ClaimTypes.Role);
+            // Kiểm tra quyền
+            var allowedRoles = new[] { "R001", "R003" };
+            if (currentUserId != editProfileDoctorDTO.UserId && !allowedRoles.Contains(userRole)) // Chỉ cho phép Doctor chỉnh sửa hồ sơ của mình
+            {
+                return Forbid("Bạn không có quyền chỉnh sửa hồ sơ bác sĩ khác");
+            }
+            var result = iProfileService.UpdateDoctorProfile(editProfileDoctorDTO);
+            if (result)
+            {
+                return Ok("Cập nhật hồ sơ bác sĩ thành công");
+            }
+            else
+            {
+                return NotFound("Không tìm thấy bác sĩ để cập nhật");
+            }
+        }
+
+        [HttpGet]
+        public IActionResult GetAllPatient()
+        {
+            
+            return null;
         }
 
 

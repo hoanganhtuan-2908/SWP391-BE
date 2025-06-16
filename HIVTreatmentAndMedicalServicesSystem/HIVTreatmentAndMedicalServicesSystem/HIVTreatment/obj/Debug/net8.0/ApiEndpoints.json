@@ -63,6 +63,22 @@
   },
   {
     "ContainingType": "HIVTreatment.Controllers.EditProfileUserController",
+    "Method": "EditDoctorProfile",
+    "RelativePath": "api/EditProfileUser/edit-doctor-profile",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "editProfileDoctorDTO",
+        "Type": "HIVTreatment.DTOs.EditprofileDoctorDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HIVTreatment.Controllers.EditProfileUserController",
     "Method": "EditProfile",
     "RelativePath": "api/EditProfileUser/edit-profile",
     "HttpMethod": "PUT",
@@ -98,6 +114,16 @@
     "Method": "Logout",
     "RelativePath": "api/Login/logout",
     "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HIVTreatment.Controllers.LoginController",
+    "Method": "GetCurrentUser",
+    "RelativePath": "api/Login/me",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
