@@ -130,6 +130,18 @@
         }
       }
     },
+    "/api/EditProfileUser": {
+      "get": {
+        "tags": [
+          "EditProfileUser"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/EditProfileUser/admin-only": {
       "get": {
         "tags": [

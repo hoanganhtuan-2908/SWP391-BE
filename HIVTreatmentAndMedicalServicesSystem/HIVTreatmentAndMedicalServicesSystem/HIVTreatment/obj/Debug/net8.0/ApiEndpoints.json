@@ -43,6 +43,16 @@
   },
   {
     "ContainingType": "HIVTreatment.Controllers.EditProfileUserController",
+    "Method": "GetAllPatient",
+    "RelativePath": "api/EditProfileUser",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HIVTreatment.Controllers.EditProfileUserController",
     "Method": "AdminOnlyEndpoint",
     "RelativePath": "api/EditProfileUser/admin-only",
     "HttpMethod": "GET",

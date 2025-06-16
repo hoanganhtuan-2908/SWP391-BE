@@ -81,8 +81,22 @@ namespace HIVTreatment.Controllers
         [HttpGet]
         public IActionResult GetAllPatient()
         {
-            
-            return null;
+
+            var currentUserId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var userRole = User.FindFirstValue(ClaimTypes.Role);
+            // Kiểm tra quyền
+            var allowedRoles = new[] { "R001", "R003" };
+            if (!allowedRoles.Contains(userRole)) // Chỉ cho phép Doctor chỉnh sửa hồ sơ của mình
+            {
+                return Forbid("Bạn không có quyền chỉnh sửa hồ sơ bác sĩ khác");
+            }
+            var patients = iProfileService.GetAllPatient();
+            if (patients == null || !patients.Any())
+            {
+                return NotFound("Không có bệnh nhân nào.");
+            }
+            return Ok(patients);
+
         }
 
 

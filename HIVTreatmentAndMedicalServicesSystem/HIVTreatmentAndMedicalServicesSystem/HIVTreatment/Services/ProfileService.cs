@@ -17,7 +17,7 @@ namespace HIVTreatment.Services
             this.iDoctorRepository = iDoctorRepository;
         }
 
-        public List<EditProfileUserDTO> GetAllPatient()
+        public List<PatientDTO> GetAllPatient()
         {
             return iPatientRepository.GetAllPatient();
             }

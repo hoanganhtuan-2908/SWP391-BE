@@ -6,7 +6,7 @@ namespace HIVTreatment.Repositories
     public interface IPatientRepository
     {
         Patient GetByPatientId(string patientID);
-        List<EditProfileUserDTO> GetAllPatient();
+        List<PatientDTO> GetAllPatient();
 
         Patient GetLastPatientId();
         void Add(Patient patient);
