@@ -15,7 +15,11 @@ namespace HIVTreatment.Services
             iPatientRepository = patientRepository;
         }
 
+<<<<<<< Updated upstream
         public bool UpdateProfile(EditProfileUserDTO editProfileDTO)
+=======
+        public List<PatientDTO> GetAllPatient()
+>>>>>>> Stashed changes
         {
             var user = iUserRepository.GetUserById(editProfileDTO.UserId);
             if (user == null)

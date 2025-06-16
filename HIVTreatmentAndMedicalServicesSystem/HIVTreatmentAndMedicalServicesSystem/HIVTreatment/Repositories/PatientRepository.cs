@@ -35,5 +35,30 @@ namespace HIVTreatment.Repositories
                 .OrderByDescending(p => Convert.ToInt32(p.PatientId.Substring(3)))
                 .FirstOrDefault();
         }
+<<<<<<< Updated upstream
+=======
+
+        public List<PatientDTO> GetAllPatient()
+        {
+            var result = (from p in context.Patients
+                          join u in context.Users on p.UserID equals u.UserId
+                          select new PatientDTO
+                          {
+                              UserId = u.UserId,
+                              Fullname = u.Fullname,
+                              Email = u.Email,
+                              PatientID = p.PatientID,
+                              DateOfBirth = p.DateOfBirth,
+                              Phone = p.Phone,
+                              Gender = p.Gender,
+                              BloodType = p.BloodType,
+                              Allergy = p.Allergy
+                          }).ToList();
+
+            return result;
+        }
+
+        
+>>>>>>> Stashed changes
     }
 }
